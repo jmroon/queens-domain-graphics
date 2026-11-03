@@ -1,0 +1,47 @@
+QUEEN'S DOMAIN GRAPHICS 1.0.0
+
+1. Close the game. Install basic UE4SS 3.0.1 into
+   QueensDomain/Binaries/Win64, beside QueensDomain-Win64-Shipping.exe:
+   https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1
+   Preserve an existing UE4SS installation and its other mods.
+2. Extract this ZIP into the Steam game folder containing QueensDomain.exe.
+   Merge the QueensDomain folder. UE4SS is a separate prerequisite.
+3. Launch, load your save, then choose Options > Video > Graphics preset > Modern.
+
+Original: stock retro resolution, AA off, game-default AF, dithering on,
+original colour steps, and original vignette.
+Modern: full resolution (100%), TAA, 16x AF, dithering off, Smooth + bias,
+and original vignette.
+Custom: your own choices; changing individual controls selects it automatically.
+
+AA: Off, FXAA (edge smoothing), or TAA (less shimmering, potentially softer).
+AF: Game default or 1x-16x; improves angled textures where sampling allows.
+Dithering: toggle the patterned colour noise.
+Gradients: Original (stepped), Smooth (interpolated), or Smooth + bias
+(interpolated with more of the original palette's warmth).
+Vignette: edge darkening, from Off to the original strength at 100%.
+
+Fresh installs preserve your current settings until you choose an option.
+Changes save immediately. Old Enhanced preferences become Modern.
+The included enabled.txt enables QDGraphics without replacing mods.txt.
+For a nonstandard UE4SS working directory, move QDGraphics into its Mods folder.
+Optional: ConsoleEnablerMod provides the console (tested with F10); qd_help lists
+commands, qd_status shows values, qd_defaults selects Original.
+
+Tested: Steam build 26356968, UE4.27, UE4SS 3.0.1, D3D11. DX12 unverified.
+Updates or mods replacing the same three assets may require a rebuild.
+Smooth gradients cost additional texture samples; Lua has no polling timer.
+
+UNINSTALL (close the game first)
+Remove QueensDomain_Graphics_P.pak and QueensDomain_GraphicsMenu_P.pak from
+QueensDomain/Content/Paks, and QDGraphics from UE4SS's Mods folder.
+Keep other mods, original game files, and saves. Choose Original before removal
+to restore stock resolution behavior. Optional preference reset: delete
+%LOCALAPPDATA%\QueensDomain\Saved\QDGraphics.ini and QDGraphics.ini.bak.
+
+UPGRADING EARLY LOCAL TEST BUILDS
+Disable ConsoleLab and NoDither, and remove the earlier
+QueensDomain_SmoothLUT_P.pak before using this replacement.
+
+Source, setting explanations, and maintenance:
+https://github.com/jmroon/queens-domain-graphics

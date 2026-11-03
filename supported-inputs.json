@@ -1,0 +1,23 @@
+{
+  "steam_app": "1799840",
+  "steam_build": "26356968",
+  "engine": "4.27",
+  "ue4ss": "3.0.1",
+  "renderer_tested": "D3D11",
+  "files": {
+    "QueensDomain/Content/VFX/Post/DitherBase.uasset": "1f206d11950689d0609c38452121a9a428400534eeec8119527b8ce9e65311d1",
+    "QueensDomain/Content/VFX/Post/DitherBase.uexp": "6ca3a04366a43c890378c8049e99f047742b4f1e6c85db61b5bd8de114d67b01",
+    "QueensDomain/Content/BaseMaterials/Resources/PixelFilter_MPC.uasset": "3e0dcfbbabe088dfea89a87915556b7a9566f4b20d541b9c4a988b240a3a894c",
+    "QueensDomain/Content/BaseMaterials/Resources/PixelFilter_MPC.uexp": "b8f24f5af77cec5bf96162901ac7b611ffd408d94a232142dc199b1b942bd993",
+    "QueensDomain/Content/UI/Menus/OptionsMenu/OptionLists/Video_OptionsList.uasset": "c7ffa5ac231055d35aaa145a5c70492b7f70684c2b57e22099efee8a767aae81",
+    "QueensDomain/Content/UI/Menus/OptionsMenu/OptionLists/Video_OptionsList.uexp": "7f44de3b0ee83f0e10c7a078110c01d69b2df77f7c0183948f32b7408fef5bcc",
+    "QueensDomain/Content/UI/LUTs/StandardColor.uasset": "1a343b31043f9ac5d0605abb286d08e1177507a68e88660e6898e2c1445b3b6e",
+    "QueensDomain/Content/UI/LUTs/StandardColor.uexp": "aef605f5fd4572ac657dce3b47f875197551073759d3e946ed2b0b72b97c496a",
+    "QueensDomain/Content/UI/LUTs/OtherWorldLUT.uasset": "d5afe88bde9d05e5201de3c718fe57d2ec557def3718b4145fa27b390e979b9b",
+    "QueensDomain/Content/UI/LUTs/OtherWorldLUT.uexp": "acf9bb77301530d59df95aa126b844ddbdaa0b7e7bb6878f3e161d3f5e59789b",
+    "QueensDomain/Content/UI/LUTs/Wincolor.uasset": "f9092ce3419826887fd06f83601336a29ecbb3a41c48b7f7c1589603e1142e24",
+    "QueensDomain/Content/UI/LUTs/Wincolor.uexp": "e4b7c61684aa1c326c789e8d7849a18379b8e8bdc15ec9e459a3efa0016e4418",
+    "QueensDomain/Content/UI/LUTs/StandardColor_OtherWorld.uasset": "4ac39fb1db34b46438afa673b14a0d5de29a3594d7a6781ce740c8fffd8548f7",
+    "QueensDomain/Content/UI/LUTs/StandardColor_OtherWorld.uexp": "48a2c577cafe4c6ebc5eac839832b1ffdcecb57540bef252cb320136440521d9"
+  }
+}

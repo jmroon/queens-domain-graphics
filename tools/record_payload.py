@@ -1,0 +1,7 @@
+"""Record reviewed runtime files after a deliberate release update."""
+import hashlib,json
+from paths import REPO
+from package_release import payload
+files={k:hashlib.sha256(v).hexdigest() for k,v in payload().items() if k.startswith('QueensDomain/')}
+(REPO/'release-files.json').write_text(json.dumps(files,indent=2)+'\n')
+print('Updated release-files.json; review its diff before committing.')

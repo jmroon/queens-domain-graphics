@@ -1,0 +1,4 @@
+interface:
+  display_name: "Queen's Domain compatibility"
+  short_description: "Retest graphics controls after game updates"
+  default_prompt: "Use $queens-domain-compatibility to validate this mod against the installed game build."

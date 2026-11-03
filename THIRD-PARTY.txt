@@ -1,0 +1,16 @@
+Original mod code and documentation: Copyright (c) 2026 jmroon, MIT (LICENSE).
+The PAKs contain modified Queen's Domain assets. Those assets and the game's
+underlying material/Blueprint content retain their original owners' rights;
+the MIT license does not grant rights to the underlying game content.
+
+Runtime dependency (not bundled): UE4SS 3.0.1, UE4SS-RE contributors.
+https://github.com/UE4SS-RE/RE-UE4SS
+
+Build tools (downloaded separately, not bundled):
+repak 0.2.3: https://github.com/trumank/repak
+UAssetGUI 1.1.0: https://github.com/atenfyr/UAssetGUI
+3Dmigoto cmd_Decompiler 1.3.16: https://github.com/bo3b/3Dmigoto
+
+Development tests use Lupa: https://github.com/scoder/lupa
+Tool versions, official download URLs, and SHA-256 hashes are pinned in
+tools/toolchain.json. Consult each upstream repository for its license.
