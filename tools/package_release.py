@@ -1,6 +1,7 @@
-"""Create a reproducible, mod-only ZIP. UE4SS and user configuration are excluded."""
-import hashlib,json,zipfile
+"""Create reproducible mod-only and standalone ZIPs; never include user settings."""
+import argparse,hashlib,json,zipfile
 from paths import REPO
+from ue4ss import loader_files
 
 def payload():
     files={}
@@ -13,14 +14,7 @@ def payload():
         files[name]=(REPO/name).read_bytes()
     return files
 
-def package():
-    version=(REPO/'VERSION').read_text().strip()
-    files=payload()
-    expected=json.loads((REPO/'release-files.json').read_text())
-    actual={k:hashlib.sha256(v).hexdigest() for k,v in files.items() if k.startswith('QueensDomain/')}
-    if actual!=expected:raise RuntimeError('Runtime payload hashes changed; review and update release-files.json before packaging.')
-    out=REPO/'dist';out.mkdir(exist_ok=True)
-    target=out/f'QueensDomain-Graphics-{version}.zip'
+def write_zip(target,files):
     with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
         for name,data in sorted(files.items()):
             info=zipfile.ZipInfo(name,date_time=(2026,1,1,0,0,0))
@@ -30,7 +24,24 @@ def package():
         assert z.testzip() is None and set(z.namelist())==set(files)
         assert all(z.read(n)==d for n,d in files.items())
     checksum=hashlib.sha256(target.read_bytes()).hexdigest()
-    (out/'SHA256SUMS.txt').write_text(f'{checksum}  {target.name}\n',encoding='ascii')
     print(target);print(checksum)
-    return target
-if __name__=='__main__':package()
+    return f'{checksum}  {target.name}\n'
+
+def package(ue4ss_archive=None):
+    version=(REPO/'VERSION').read_text().strip()
+    files=payload()
+    expected=json.loads((REPO/'release-files.json').read_text())
+    actual={k:hashlib.sha256(v).hexdigest() for k,v in files.items() if k.startswith('QueensDomain/')}
+    if actual!=expected:raise RuntimeError('Runtime payload hashes changed; review and update release-files.json before packaging.')
+    loader=loader_files(ue4ss_archive)
+    if files.keys() & loader.keys():raise RuntimeError('Loader would overwrite a mod payload file')
+    out=REPO/'dist';out.mkdir(exist_ok=True)
+    targets=[out/f'QueensDomain-Graphics-{version}.zip',out/f'QueensDomain-Graphics-Standalone-{version}.zip']
+    checksums=write_zip(targets[0],files)+write_zip(targets[1],dict(files,**loader))
+    (out/'SHA256SUMS.txt').write_text(checksums,encoding='ascii')
+    return targets
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--ue4ss-archive',help='Use a local copy of the pinned upstream archive instead of downloading it.')
+    package(parser.parse_args().ue4ss_archive)

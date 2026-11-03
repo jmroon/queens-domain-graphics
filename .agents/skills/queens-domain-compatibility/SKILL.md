@@ -18,6 +18,9 @@ making a compatibility claim.
    Run `tools/build_all.py`, `tools/check_biased_shader.py`, and `tools/test.py`
    as documented. Inspect differences before accepting new PAKs. Record skipped
    GPU/game checks explicitly rather than weakening them for CI.
+   For a packaging-only release, follow the narrower validation path in the
+   maintenance guide. Keep mod-only and standalone payloads identical apart from
+   the pinned UE4SS bundle; preserve its license and verify both ZIP checksums.
 3. For installation testing, close the game and back up only the affected mod
    files and settings first. Use the maintenance checklist for presets, fresh
    preferences, world changes, persistence, visuals, damage/cutscene behavior,

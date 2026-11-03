@@ -1,4 +1,22 @@
-# Release 1.0.0 validation
+# Validation record
+
+## Release 1.0.1: standalone packaging
+
+Adds an extract-and-play package with UE4SS 3.0.1. The six common mod payload hashes
+(two PAKs, three Lua files, enable marker) are unchanged from 1.0.0; the previous
+asset and GPU results below still apply. Steam baseline remains 26356968.
+
+Validation covers the pinned upstream archive, unchanged loader/helper bytes,
+configuration comparison, enabled mod entrypoints, license inclusion, fresh ZIP
+extraction layout, separation from mod-only, rejection of incorrect loader archives,
+both download checksums, and the existing Lua regression tests. CI repeats the
+checks from a clean checkout. Standalone's loader settings match the already tested
+installation; unrelated built-in helper mods are omitted.
+
+A fresh in-game launch from the standalone ZIP has not been performed. The user's
+installed game and settings were deliberately left unchanged. DX12 remains unverified.
+
+## Release 1.0.0
 
 Baseline: Steam app 1799840, build **26356968**, Windows x64, Unreal 4.27, UE4SS 3.0.1, D3D11. The first release packages the previously tested local mod with Enhanced renamed to Modern.
 

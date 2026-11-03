@@ -6,9 +6,13 @@ Adds persistent graphics controls to **Options → Video**, including **Original
 
 ## Install
 
-1. Close the game. Install the basic **[UE4SS 3.0.1](https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1)** package into `QueensDomain/Binaries/Win64`, beside `QueensDomain-Win64-Shipping.exe`. If UE4SS is already installed, keep its configuration and other mods.
-2. Download `QueensDomain-Graphics-1.0.0.zip` from Releases. Extract it into the **Steam game folder containing `QueensDomain.exe`**, merging the included `QueensDomain` folder. The mod ZIP does not include UE4SS.
-3. Launch, load a save, and open **Options → Video → Graphics preset → Modern**.
+1. Close the game and choose a download from Releases:
+   - **Standalone** (`QueensDomain-Graphics-Standalone-1.0.1.zip`): includes the tested UE4SS 3.0.1 loader, configured and ready. Use this if you do **not** already have UE4SS installed.
+   - **Mod-only** (`QueensDomain-Graphics-1.0.1.zip`): use this if UE4SS is already installed, preserving its configuration and other mods.
+2. Extract the chosen ZIP into the **Steam game folder containing `QueensDomain.exe`**, merging the included `QueensDomain` folder.
+3. Launch, load a save, and open **Options → Video → Graphics preset → Modern**. No configuration editing is needed for standalone.
+
+Standalone includes loader configuration and `Mods/mods.txt`; use mod-only for updates to an existing UE4SS installation. If installing UE4SS manually, extract the basic **[UE4SS 3.0.1](https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1)** package into `QueensDomain/Binaries/Win64`, beside `QueensDomain-Win64-Shipping.exe`, before adding mod-only.
 
 The included `QDGraphics/enabled.txt` enables the mod without replacing `mods.txt`. A fresh installation preserves your existing settings until you choose an option. The ZIP uses UE4SS 3.0.1's standard `Win64/Mods` layout; if you deliberately use a different UE4SS working directory, place `QDGraphics` in that directory's `Mods` folder instead.
 
@@ -29,7 +33,7 @@ Changes save immediately and survive restarts. Selecting Custom does not change 
 
 ## Optional console
 
-Enable UE4SS's `ConsoleEnablerMod` to use the developer console (F10 in the tested setup). The menu works without it. Run `qd_help` for commands:
+Standalone includes and enables UE4SS's `ConsoleEnablerMod`: press **F10** for the developer console. With mod-only, enable that helper in your existing UE4SS setup if wanted. The menu works without it. Run `qd_help` for commands:
 
 ```text
 qd_preset original|modern|custom
@@ -52,5 +56,7 @@ Tested with **Steam build 26356968**, **UE4.27**, **UE4SS 3.0.1**, and **D3D11**
 Updates can affect the three overridden assets: `DitherBase`, `PixelFilter_MPC`, and `Video_OptionsList`. Other mods replacing them can conflict. This is a PAK **and** Lua mod; putting everything in `~mods` is insufficient. Original game PAKs remain untouched.
 
 To uninstall, close the game and remove `QueensDomain_Graphics_P.pak`, `QueensDomain_GraphicsMenu_P.pak` from `QueensDomain/Content/Paks`, and the `QDGraphics` folder from UE4SS's `Mods`. Keep other mods and saves. Select Original before uninstalling if you want stock resolution behavior restored. You may also delete the mod's `.ini` and `.ini.bak` to clear its preferences.
+
+If you used standalone and **no other mods use UE4SS**, you can also remove its `dwmapi.dll`, `UE4SS.dll`, `UE4SS-settings.ini`, `UE4SS-LICENSE.txt`, and bundled `Mods/ConsoleEnablerMod`, `Mods/shared/UEHelpers`, and `Mods/mods.txt` from `QueensDomain/Binaries/Win64`. Keep the loader and shared files if you have added other UE4SS mods.
 
 Original code and documentation are MIT licensed. Game-derived assets retain their owners' rights; see [THIRD-PARTY.txt](THIRD-PARTY.txt).

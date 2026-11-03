@@ -1,12 +1,18 @@
-QUEEN'S DOMAIN GRAPHICS 1.0.0
+QUEEN'S DOMAIN GRAPHICS 1.0.1
 
-1. Close the game. Install basic UE4SS 3.0.1 into
-   QueensDomain/Binaries/Win64, beside QueensDomain-Win64-Shipping.exe:
-   https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1
-   Preserve an existing UE4SS installation and its other mods.
+1. Close the game. Choose ONE download:
+   Standalone: includes UE4SS 3.0.1, configured and ready. Use this if UE4SS
+   is not installed. No extra downloads or configuration edits are needed.
+   Mod-only: use with an existing UE4SS setup to preserve its configuration
+   and other mods. Use this for future mod updates too.
 2. Extract this ZIP into the Steam game folder containing QueensDomain.exe.
-   Merge the QueensDomain folder. UE4SS is a separate prerequisite.
+   Merge the QueensDomain folder.
 3. Launch, load your save, then choose Options > Video > Graphics preset > Modern.
+
+Manual UE4SS setup (only if using mod-only without an existing loader):
+Extract the basic UE4SS 3.0.1 package beside QueensDomain-Win64-Shipping.exe
+in QueensDomain/Binaries/Win64:
+https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1
 
 Original: stock retro resolution, AA off, game-default AF, dithering on,
 original colour steps, and original vignette.
@@ -25,8 +31,9 @@ Fresh installs preserve your current settings until you choose an option.
 Changes save immediately. Old Enhanced preferences become Modern.
 The included enabled.txt enables QDGraphics without replacing mods.txt.
 For a nonstandard UE4SS working directory, move QDGraphics into its Mods folder.
-Optional: ConsoleEnablerMod provides the console (tested with F10); qd_help lists
-commands, qd_status shows values, qd_defaults selects Original.
+Standalone enables ConsoleEnablerMod: F10 opens the console. With mod-only,
+enable that helper if wanted. qd_help lists commands, qd_status shows values,
+and qd_defaults selects Original. The menu works without the console.
 
 Tested: Steam build 26356968, UE4.27, UE4SS 3.0.1, D3D11. DX12 unverified.
 Updates or mods replacing the same three assets may require a rebuild.
@@ -38,6 +45,11 @@ QueensDomain/Content/Paks, and QDGraphics from UE4SS's Mods folder.
 Keep other mods, original game files, and saves. Choose Original before removal
 to restore stock resolution behavior. Optional preference reset: delete
 %LOCALAPPDATA%\QueensDomain\Saved\QDGraphics.ini and QDGraphics.ini.bak.
+
+If standalone installed UE4SS and no other mods need it, you may also remove
+dwmapi.dll, UE4SS.dll, UE4SS-settings.ini, UE4SS-LICENSE.txt,
+Mods/ConsoleEnablerMod, Mods/shared/UEHelpers, and Mods/mods.txt from
+QueensDomain/Binaries/Win64. Keep shared loader files if other mods use them.
 
 UPGRADING EARLY LOCAL TEST BUILDS
 Disable ConsoleLab and NoDither, and remove the earlier

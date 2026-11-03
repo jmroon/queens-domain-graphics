@@ -3,8 +3,14 @@ The PAKs contain modified Queen's Domain assets. Those assets and the game's
 underlying material/Blueprint content retain their original owners' rights;
 the MIT license does not grant rights to the underlying game content.
 
-Runtime dependency (not bundled): UE4SS 3.0.1, UE4SS-RE contributors.
+Runtime dependency: UE4SS 3.0.1, UE4SS-RE contributors.
 https://github.com/UE4SS-RE/RE-UE4SS
+Bundled only in the Standalone ZIP, with original loader binaries, ConsoleEnablerMod,
+and UEHelpers. The upstream MIT license (Copyright (c) 2022 Narknon) is retained
+as QueensDomain/Binaries/Win64/UE4SS-LICENSE.txt. Source license:
+https://github.com/UE4SS-RE/RE-UE4SS/blob/v3.0.1/LICENSE
+Standalone disables the external debug GUI and enables only QDGraphics and
+ConsoleEnablerMod. The archive URL and SHA-256 are pinned in tools/ue4ss.py.
 
 Build tools (downloaded separately, not bundled):
 repak 0.2.3: https://github.com/trumank/repak
