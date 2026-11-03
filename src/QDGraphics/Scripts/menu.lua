@@ -1,115 +1,213 @@
 -- Native Video options rows are supplied by QueensDomain_GraphicsMenu_P.pak.
 -- All callbacks are event driven. Existing game options are ignored.
 return function(api)
-    local path="/Game/UI/Menus/OptionsMenu/OptionsMenu_OptionSelect"
-    local class=path..".OptionsMenu_OptionSelect_C:"
-    local choices={preset={"original","modern","custom"},aa={"off","fxaa","taa"},af={"game",1,2,4,8,16},dither={0,1},
-                   gradients={"original","smooth","biased"},vignette={0,25,50,75,100}}
-    local controls={};local installed={};local refreshing=false
-    local function valid(o)return o~=nil and o:IsValid() end
-    local function key_of(o)
-        if not valid(o) then return nil end
-        local key=o:GetFName():ToString():match("^QDGraphicsControl_(%a+)$")
-        if choices[key] and o.SkipSavingOption then return key end
+    local path = "/Game/UI/Menus/OptionsMenu/OptionsMenu_OptionSelect"
+    local class = path .. ".OptionsMenu_OptionSelect_C:"
+    local choices = {
+        preset = { "original", "modern", "custom" },
+        aa = { "off", "fxaa", "taa" },
+        af = { "game", 1, 2, 4, 8, 16 },
+        dither = { 0, 1 },
+        gradients = { "original", "smooth", "biased" },
+        vignette = { 0, 25, 50, 75, 100 },
+    }
+    local tracked_controls = {}
+    local installed_hooks = {}
+    local refreshing = false
+    local function is_valid(control)
+        return control ~= nil and control:IsValid()
+    end
+    local function setting_key(control)
+        if not is_valid(control) then
+            return nil
+        end
+        local key = control:GetFName():ToString():match("^QDGraphicsControl_(%a+)$")
+        if choices[key] and control.SkipSavingOption then
+            return key
+        end
         return nil
     end
-    local function update(o,key)
-        local value=api.get(key);local selected=1;local exact=false
-        for i,v in ipairs(choices[key]) do
-            if v==value then selected=i;exact=true;break end
-            if key=="vignette" and v<value then selected=i end
+    local function refresh_mod_control(control, key)
+        local value = api.get(key)
+        local selected = 1
+        local exact = false
+        for i, v in ipairs(choices[key]) do
+            if v == value then
+                selected = i
+                exact = true
+                break
+            end
+            if key == "vignette" and v < value then
+                selected = i
+            end
         end
-        o.CurrentValue=selected-1
-        o:Refreshtext()
+        control.CurrentValue = selected - 1
+        control:Refreshtext()
         -- A precise console percentage need not be one of the menu presets.
-        if key=="vignette" and not exact and valid(o.OptionText) then
-            o.OptionText:SetText(FText(tostring(value).."% (Custom)"))
-        elseif not exact and valid(o.OptionText) then
-            o.OptionText:SetText(FText(tostring(value).." (Custom)"))
+        if key == "vignette" and not exact and is_valid(control.OptionText) then
+            control.OptionText:SetText(FText(tostring(value) .. "% (Custom)"))
+        elseif not exact and is_valid(control.OptionText) then
+            control.OptionText:SetText(FText(tostring(value) .. " (Custom)"))
         end
     end
-    local function update_native(o,kind)
-        local n=api.native();if not n then return end
-        if kind=="retro" then
-            if o.CurrentValue~=n.retro then o.CurrentValue=n.retro;o:PlayRelevantToggleAnim()end
+    local function refresh_native_control(control, kind)
+        local resolution = api.native()
+        if not resolution then
+            return
+        end
+        if kind == "retro" then
+            if control.CurrentValue ~= resolution.retro then
+                control.CurrentValue = resolution.retro
+                control:PlayRelevantToggleAnim()
+            end
         else
-            if o.CurrentValue~=n.scale then o.CurrentValue=n.scale;o.Slider_99:SetValue(n.scale);o:UpdateReadout()end
-            o:SetIsEnabled(not n.retro)
+            if control.CurrentValue ~= resolution.scale then
+                control.CurrentValue = resolution.scale
+                control.Slider_99:SetValue(resolution.scale)
+                control:UpdateReadout()
+            end
+            control:SetIsEnabled(not resolution.retro)
         end
     end
     local function refresh()
-        if refreshing then return end
-        refreshing=true
-        for id,entry in pairs(controls) do
-            local ok,err=pcall(function()
+        if refreshing then
+            return
+        end
+        refreshing = true
+        for address, entry in pairs(tracked_controls) do
+            local success, callback_error = pcall(function()
                 -- Resolve the widget afresh: never keep a raw UObject across
                 -- menu destruction, garbage collection, or a level transition.
-                local o=StaticFindObject(entry.path)
+                local control = StaticFindObject(entry.path)
                 if entry.kind then
-                    if not valid(o) or o:GetAddress()~=id or o:GetFullName()~=entry.name then controls[id]=nil;return end
-                    update_native(o,entry.kind);return
+                    if
+                        not is_valid(control)
+                        or control:GetAddress() ~= address
+                        or control:GetFullName() ~= entry.name
+                    then
+                        tracked_controls[address] = nil
+                        return
+                    end
+                    refresh_native_control(control, entry.kind)
+                    return
                 end
-                if key_of(o)~=entry.key or o:GetAddress()~=id then controls[id]=nil;return end
-                update(o,entry.key)
+                if setting_key(control) ~= entry.key or control:GetAddress() ~= address then
+                    tracked_controls[address] = nil
+                    return
+                end
+                refresh_mod_control(control, entry.key)
             end)
-            if not ok then controls[id]=nil;api.log("Menu refresh: "..tostring(err)) end
+            if not success then
+                tracked_controls[address] = nil
+                api.log("Menu refresh: " .. tostring(callback_error))
+            end
         end
-        refreshing=false
+        refreshing = false
     end
-    local function init(ctx)
-        local o=ctx:get();local key=key_of(o);if not key then return end
-        local name=o:GetFullName()
-        controls[o:GetAddress()]={key=key,name=name,path=name:match("^%S+ (.+)$")}
-        update(o,key)
-        api.log("Menu ready: "..key.."="..tostring(api.get(key)))
+    local function on_mod_control_initialized(context)
+        local control = context:get()
+        local key = setting_key(control)
+        if not key then
+            return
+        end
+        local name = control:GetFullName()
+        tracked_controls[control:GetAddress()] =
+            { key = key, name = name, path = name:match("^%S+ (.+)$") }
+        refresh_mod_control(control, key)
+        api.log("Menu ready: " .. key .. "=" .. tostring(api.get(key)))
     end
-    local function save(ctx)
-        if refreshing then return end
-        local o=ctx:get();local key=key_of(o);if not key then return end
-        local entry=controls[o:GetAddress()]
+    local function on_mod_control_changed(context)
+        if refreshing then
+            return
+        end
+        local control = context:get()
+        local key = setting_key(control)
+        if not key then
+            return
+        end
+        local entry = tracked_controls[control:GetAddress()]
         -- Construction/reversion must not overwrite saved values.
-        if not entry or entry.name~=o:GetFullName() then return end
-        local value=choices[key][o.CurrentValue+1]
-        if value==nil then update(o,key);return end
-        if value~=api.get(key) then
-            local ok,err=pcall(api.change,key,value)
-            if not ok then api.log("Could not save menu selection: "..tostring(err));update(o,key) end
+        if not entry or entry.name ~= control:GetFullName() then
+            return
+        end
+        local value = choices[key][control.CurrentValue + 1]
+        if value == nil then
+            refresh_mod_control(control, key)
+            return
+        end
+        if value ~= api.get(key) then
+            local success, callback_error = pcall(api.change, key, value)
+            if not success then
+                api.log("Could not save menu selection: " .. tostring(callback_error))
+                refresh_mod_control(control, key)
+            end
         end
     end
-    local function native_init(ctx)
-        local o=ctx:get();if not valid(o) then return end
-        local property=o.Property:ToString()
-        local kind=property=="LockedResScale" and "retro" or (property=="ResScale" and "scale" or nil)
-        if not kind then return end
-        local name=o:GetFullName()
-        controls[o:GetAddress()]={kind=kind,name=name,path=name:match("^%S+ (.+)$")}
+    local function on_native_control_initialized(context)
+        local control = context:get()
+        if not is_valid(control) then
+            return
+        end
+        local property = control.Property:ToString()
+        local kind = property == "LockedResScale" and "retro"
+            or (property == "ResScale" and "scale" or nil)
+        if not kind then
+            return
+        end
+        local name = control:GetFullName()
+        tracked_controls[control:GetAddress()] =
+            { kind = kind, name = name, path = name:match("^%S+ (.+)$") }
     end
-    local function guarded(fn)
+    local function guard_callback(callback)
         return function(...)
-            local ok,err=pcall(fn,...)
-            if not ok then api.log("Menu callback: "..tostring(err)) end
+            local success, callback_error = pcall(callback, ...)
+            if not success then
+                api.log("Menu callback: " .. tostring(callback_error))
+            end
         end
     end
     local function setup()
-        if installed.Init and installed.SaveProperty and installed.NativeToggle and installed.NativeSlider then return end
-        if not valid(StaticFindObject(class.."Init")) then LoadAsset(path) end
-        for name,fn in pairs({Init=init,SaveProperty=save}) do
-            if not installed[name] then
-                assert(valid(StaticFindObject(class..name)),"Menu function not loaded: "..name)
+        if
+            installed_hooks.Init
+            and installed_hooks.SaveProperty
+            and installed_hooks.NativeToggle
+            and installed_hooks.NativeSlider
+        then
+            return
+        end
+        if not is_valid(StaticFindObject(class .. "Init")) then
+            LoadAsset(path)
+        end
+        for name, callback in pairs({
+            Init = on_mod_control_initialized,
+            SaveProperty = on_mod_control_changed,
+        }) do
+            if not installed_hooks[name] then
+                assert(
+                    is_valid(StaticFindObject(class .. name)),
+                    "Menu function not loaded: " .. name
+                )
                 -- Blueprint functions use the second argument as a post-hook.
-                RegisterHook(class..name,guarded(fn));installed[name]=true
+                RegisterHook(class .. name, guard_callback(callback))
+                installed_hooks[name] = true
             end
         end
-        for _,entry in ipairs({{"NativeToggle","OptionsMenu_ToggleControl"},{"NativeSlider","OptionsMenu_SliderControl"}})do
-            if not installed[entry[1]]then
-                local asset="/Game/UI/Menus/OptionsMenu/"..entry[2]
-                local fn=asset.."."..entry[2].."_C:Init"
-                if not valid(StaticFindObject(fn))then LoadAsset(asset)end
-                assert(valid(StaticFindObject(fn)),"Native option function unavailable")
-                RegisterHook(fn,guarded(native_init));installed[entry[1]]=true
+        for _, entry in ipairs({
+            { "NativeToggle", "OptionsMenu_ToggleControl" },
+            { "NativeSlider", "OptionsMenu_SliderControl" },
+        }) do
+            if not installed_hooks[entry[1]] then
+                local asset = "/Game/UI/Menus/OptionsMenu/" .. entry[2]
+                local callback = asset .. "." .. entry[2] .. "_C:Init"
+                if not is_valid(StaticFindObject(callback)) then
+                    LoadAsset(asset)
+                end
+                assert(is_valid(StaticFindObject(callback)), "Native option function unavailable")
+                RegisterHook(callback, guard_callback(on_native_control_initialized))
+                installed_hooks[entry[1]] = true
             end
         end
         api.log("Native graphics-menu controls connected")
     end
-    return {setup=setup,refresh=refresh}
+    return { setup = setup, refresh = refresh }
 end

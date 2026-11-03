@@ -1,0 +1,1835 @@
+[
+  {
+    "action": "available=false;ready()",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        0,
+        0,
+        0
+      ],
+      "menu_preset": null,
+      "preferences": null,
+      "backup": null
+    }
+  },
+  {
+    "action": "available=true;ready();preset=widget('preset',1)",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        0,
+        0,
+        0
+      ],
+      "menu_preset": 0,
+      "preferences": null,
+      "backup": null
+    }
+  },
+  {
+    "action": "choose(preset,1)",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        3,
+        4,
+        1
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": null
+    }
+  },
+  {
+    "action": "run('qd_vignette','33.5')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.335,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        6,
+        8,
+        1
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=33.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','enhanced')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        9,
+        12,
+        2
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=33.5\n"
+    }
+  },
+  {
+    "action": "save.ResScale=87;native_changed()",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 87
+      },
+      "writes": [
+        12,
+        16,
+        2
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','original')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        15,
+        19,
+        3
+      ],
+      "menu_preset": 0,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "failResolution=true;run('qd_preset','modern');failResolution=false",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        18,
+        22,
+        3
+      ],
+      "menu_preset": 0,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','invalid');run('qd_vignette','101')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        18,
+        22,
+        3
+      ],
+      "menu_preset": 0,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "hooks.world()",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        21,
+        25,
+        3
+      ],
+      "menu_preset": 0,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','modern')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        24,
+        29,
+        4
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','off')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        27,
+        32,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','taa')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        30,
+        36,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','original')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        33,
+        40,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','custom')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        33,
+        40,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','biased')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        36,
+        44,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_vignette','0')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        39,
+        48,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=0\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','fxaa')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 1,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        42,
+        51,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=16\ndither=0\ngradients=biased\nvignette=0\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=0\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','fxaa')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 1,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        45,
+        54,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=16\ndither=0\ngradients=biased\nvignette=0\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=16\ndither=0\ngradients=biased\nvignette=0\n"
+    }
+  },
+  {
+    "action": "run('qd_vignette','12.5')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 1,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        48,
+        57,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=16\ndither=0\ngradients=biased\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=16\ndither=0\ngradients=biased\nvignette=0\n"
+    }
+  },
+  {
+    "action": "run('qd_af','2')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 1,
+        "r.MaxAnisotropy": 2,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        51,
+        60,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=2\ndither=0\ngradients=biased\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=16\ndither=0\ngradients=biased\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_dither','1')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 1,
+        "r.MaxAnisotropy": 2,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        54,
+        63,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=2\ndither=1\ngradients=biased\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=2\ndither=0\ngradients=biased\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_dither','0')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 1,
+        "r.MaxAnisotropy": 2,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        57,
+        66,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=2\ndither=0\ngradients=biased\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=2\ndither=1\ngradients=biased\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','taa')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 2,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        60,
+        70,
+        4
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=2\ndither=0\ngradients=biased\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=fxaa\naf=2\ndither=0\ngradients=biased\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','original')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        63,
+        73,
+        5
+      ],
+      "menu_preset": 0,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=2\ndither=0\ngradients=biased\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','custom')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        63,
+        73,
+        5
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','taa')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        66,
+        77,
+        5
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_dither','0')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        69,
+        81,
+        5
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=1\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','enhanced')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        72,
+        85,
+        6
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_af','game')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        75,
+        89,
+        6
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','enhanced')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        78,
+        93,
+        7
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','off')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        81,
+        96,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','smooth')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 1,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        84,
+        99,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=16\ndither=0\ngradients=smooth\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_af','game')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 1,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        87,
+        102,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=0\ngradients=smooth\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=16\ndither=0\ngradients=smooth\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','original')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        90,
+        105,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=0\ngradients=smooth\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_af','0')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 0,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        93,
+        108,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_dither','0')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 0,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        96,
+        111,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_dither','0')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 0,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        99,
+        114,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_vignette','100')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 0,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        102,
+        117,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','taa')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 0,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        105,
+        121,
+        7
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=0\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=0\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','modern')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        108,
+        125,
+        8
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=0\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','original')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        111,
+        129,
+        8
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_vignette','100')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        114,
+        133,
+        8
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','original')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 0,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        117,
+        136,
+        9
+      ],
+      "menu_preset": 0,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_gradients','smooth')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 1,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        120,
+        139,
+        9
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=smooth\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=original\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=original\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_vignette','12.5')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 1,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 0,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 0,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        123,
+        142,
+        9
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=smooth\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=smooth\nvignette=100\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','taa')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 1,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        126,
+        146,
+        9
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=1\ngradients=smooth\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=0\ntaa_algorithm=0\naa=off\naf=game\ndither=1\ngradients=smooth\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_af','game')",
+    "state": {
+      "material": {
+        "EnableDither": 1,
+        "QD_Vignette": 0.125,
+        "InCutscene": 1,
+        "QD_SmoothColours": 1,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 8,
+        "r.ScreenPercentage": 37.5,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": true,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 80
+      },
+      "writes": [
+        129,
+        150,
+        9
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=1\ngradients=smooth\nvignette=12.5\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=1\ngradients=smooth\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_preset','modern')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        132,
+        154,
+        10
+      ],
+      "menu_preset": 1,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=game\ndither=1\ngradients=smooth\nvignette=12.5\n"
+    }
+  },
+  {
+    "action": "run('qd_aa','taa')",
+    "state": {
+      "material": {
+        "EnableDither": 0,
+        "QD_Vignette": 1.0,
+        "InCutscene": 1,
+        "QD_SmoothColours": 2,
+        "Damage": 0.33
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.ScreenPercentage": 100,
+        "r.PostProcessAAQuality": 4,
+        "sg.TextureQuality": 3
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "Brightness": 0.9,
+        "FOV": 97,
+        "ResScale": 100
+      },
+      "writes": [
+        135,
+        158,
+        10
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  },
+  {
+    "action": "restart",
+    "state": {
+      "material": {
+        "QD_Vignette": 1.0,
+        "QD_SmoothColours": 2,
+        "InCutscene": 1,
+        "Damage": 0.33,
+        "EnableDither": 0
+      },
+      "console_variables": {
+        "r.TemporalAA.Algorithm": 0,
+        "sg.TextureQuality": 3,
+        "r.DefaultFeature.AntiAliasing": 2,
+        "r.MaxAnisotropy": 16,
+        "r.PostProcessAAQuality": 4
+      },
+      "native_settings": {
+        "Vsync": true,
+        "FOV": 97,
+        "Brightness": 0.9,
+        "FramerateCap": 2,
+        "LockedResScale": false,
+        "ResScale": 100
+      },
+      "writes": [
+        3,
+        4,
+        0
+      ],
+      "menu_preset": 2,
+      "preferences": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=custom\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n",
+      "backup": "; Queen's Domain graphics mod preferences\nversion=2\nmanaged=1\npreset=modern\naa_quality=4\ntaa_algorithm=0\naa=taa\naf=16\ndither=0\ngradients=biased\nvignette=100\n"
+    }
+  }
+]

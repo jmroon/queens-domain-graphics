@@ -1,8 +1,18 @@
-"""Run control/menu regression tests and verify the release payload."""
-import subprocess,sys
-from paths import REPO
-for name in ('test_presets.py','test_menu.py'):
-    subprocess.run([sys.executable,str(REPO/'tests'/name)],check=True)
+"""Run Lua behavior checks, package both variants, then validate their contents."""
+
+import subprocess
+import sys
+
 from package_release import package
-package()
-subprocess.run([sys.executable,str(REPO/'tests/test_package.py')],check=True)
+from paths import REPO
+
+
+def main():
+    for name in ("test_presets.py", "test_menu.py", "test_behavior_parity.py"):
+        subprocess.run([sys.executable, str(REPO / "tests" / name)], check=True)
+    package()
+    subprocess.run([sys.executable, str(REPO / "tests/test_package.py")], check=True)
+
+
+if __name__ == "__main__":
+    main()
