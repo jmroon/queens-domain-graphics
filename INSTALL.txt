@@ -1,4 +1,4 @@
-QUEEN'S DOMAIN GRAPHICS 1.0.1
+QUEEN'S DOMAIN GRAPHICS 1.0.2
 
 1. Close the game. Choose ONE download:
    Standalone: includes UE4SS 3.0.1, configured and ready. Use this if UE4SS

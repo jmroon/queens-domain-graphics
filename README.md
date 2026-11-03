@@ -7,8 +7,8 @@ Adds persistent graphics controls to **Options → Video**, including **Original
 ## Install
 
 1. Close the game and choose a download from Releases:
-   - **Standalone** (`QueensDomain-Graphics-Standalone-1.0.1.zip`): includes the tested UE4SS 3.0.1 loader, configured and ready. Use this if you do **not** already have UE4SS installed.
-   - **Mod-only** (`QueensDomain-Graphics-1.0.1.zip`): use this if UE4SS is already installed, preserving its configuration and other mods.
+   - **Standalone** (`QueensDomain-Graphics-Standalone-1.0.2.zip`): includes the tested UE4SS 3.0.1 loader, configured and ready. Use this if you do **not** already have UE4SS installed.
+   - **Mod-only** (`QueensDomain-Graphics-1.0.2.zip`): use this if UE4SS is already installed, preserving its configuration and other mods.
 2. Extract the chosen ZIP into the **Steam game folder containing `QueensDomain.exe`**, merging the included `QueensDomain` folder.
 3. Launch, load a save, and open **Options → Video → Graphics preset → Modern**. No configuration editing is needed for standalone.
 

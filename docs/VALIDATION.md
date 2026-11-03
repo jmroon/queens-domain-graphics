@@ -1,6 +1,6 @@
 # Validation record
 
-## Readability refactor (not released)
+## Release 1.0.2: readability refactor
 
 Preferences and rendering are separate Lua modules; menu/native callbacks use
 descriptive names and expanded control flow. Build phases are named functions;
@@ -9,9 +9,14 @@ checks run in CI. Runtime behavior is compared with 51 transitions captured from
 release 1.0.1, including exact preference/backup contents and rollback. Rebuilt
 PAK asset contents remain byte-identical to 1.0.1.
 
-The installed game and published downloads are unchanged. No new in-game smoke
-test has been performed for the refactored Lua modules; this remains a release
-validation item. Shader/GPU and mock tests do not replace that check.
+The local installation was updated from the verified mod-only package with a
+backup of affected mod files and settings. Existing preferences and loader files
+were preserved. Hardware/WARP GPU checks, source rebuild comparison, Lua
+regressions, 51-transition parity, formatting/lint, and package checks passed.
+No new in-game smoke test has been performed for the refactored Lua modules;
+menu, gameplay, and restart verification remain pending. Shader/GPU and mock
+tests do not replace that check. Steam baseline remains 26356968; DX12 remains
+unverified.
 
 ## Release 1.0.1: standalone packaging
 
