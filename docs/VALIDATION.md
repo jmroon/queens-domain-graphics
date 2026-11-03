@@ -19,7 +19,13 @@ mod initialization, menu hook registration, and applying settings when the playe
 is ready. This covers the initial in-game smoke test; an additional restart after
 changing settings, level travel, damage/cutscene behavior, and a fresh standalone
 installation were not independently retested for this release. Steam baseline
-remains 26356968; DX12 remains unverified.
+remains 26356968.
+
+On 2026-11-03, the maintainer additionally reported that the installed 1.0.2 mod
+works in DX12 mode. This records a successful in-game DX12 test; the automated
+shader checks still use D3D11 hardware/WARP, and this report does not establish
+exhaustive DX12 performance or every effect/level combination. Earlier release
+entries below describe the evidence available at their original validation dates.
 
 ## Release 1.0.1: standalone packaging
 

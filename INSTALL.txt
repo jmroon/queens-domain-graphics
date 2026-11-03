@@ -35,7 +35,8 @@ Standalone enables ConsoleEnablerMod: F10 opens the console. With mod-only,
 enable that helper if wanted. qd_help lists commands, qd_status shows values,
 and qd_defaults selects Original. The menu works without the console.
 
-Tested: Steam build 26356968, UE4.27, UE4SS 3.0.1, D3D11. DX12 unverified.
+Tested: Steam build 26356968, UE4.27, UE4SS 3.0.1, D3D11 and DX12.
+DX12 confirmed working in game by the maintainer on 2026-11-03.
 Updates or mods replacing the same three assets may require a rebuild.
 Smooth gradients cost additional texture samples; Lua has no polling timer.
 

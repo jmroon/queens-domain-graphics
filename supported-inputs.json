@@ -3,7 +3,7 @@
   "steam_build": "26356968",
   "engine": "4.27",
   "ue4ss": "3.0.1",
-  "renderer_tested": "D3D11",
+  "renderer_tested": "D3D11, D3D12",
   "files": {
     "QueensDomain/Content/VFX/Post/DitherBase.uasset": "1f206d11950689d0609c38452121a9a428400534eeec8119527b8ce9e65311d1",
     "QueensDomain/Content/VFX/Post/DitherBase.uexp": "6ca3a04366a43c890378c8049e99f047742b4f1e6c85db61b5bd8de114d67b01",
