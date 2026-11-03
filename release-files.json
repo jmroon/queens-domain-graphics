@@ -1,8 +1,10 @@
 {
   "QueensDomain/Content/Paks/QueensDomain_Graphics_P.pak": "021c07c305c09610d90d099ac8d71e27ae5f86ee8a1826f510b537efd1821e7f",
   "QueensDomain/Content/Paks/QueensDomain_GraphicsMenu_P.pak": "d0f8262b576fee2e2481df6e5fc0e733fb6fda31a629a4ebd7ff620395c0f98e",
-  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/main.lua": "c1f09de83bcf612c37a70bde3a29838d19619e52e3e9254b127a0b14ce081335",
-  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/menu.lua": "23707f00429f54bac397d7332e8542ed04cd0c443ac6c453c19e6e2da3502c18",
-  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/native.lua": "20686510ca214cd22eeb8de45828b70afa7079c68983f194d27a0619ce811d3e",
+  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/main.lua": "9e4ee15cfda9be41b68a1348fff441130b540e9506c314a2e0b7bc2fc9afa0a7",
+  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/menu.lua": "31f1b865b719c33dd129105b4e4989ae60f6bf8ddeb0d0c96319821eb50f3f61",
+  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/native.lua": "b2e94fb7f2a9f2720715300c9d0eab846fe041a639a872a5113084f37038b423",
+  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/preferences.lua": "56d3374922bd9e8c600bc03b6cf0808d2edb3ae5281c74436c3f8860388e510c",
+  "QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/renderer.lua": "ca08ea0511c2354bc6f986379ccf1672f15de383405039c81682cba137709288",
   "QueensDomain/Binaries/Win64/Mods/QDGraphics/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }

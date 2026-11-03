@@ -2,6 +2,8 @@
 
 The source reconstructs the two override PAKs from a local, legitimate game installation. It does not modify the game, saves, or installed mod. Only the small modified PAKs are committed; extracted originals and build tools are ignored.
 
+See [SOURCE_GUIDE.md](SOURCE_GUIDE.md) for the module map and formatting commands.
+
 ## Setup and build
 
 Use Windows x64 with Python 3.13. From the repository root:
@@ -35,7 +37,7 @@ For packaging-only changes with identical Lua/PAK hashes, run the package and Lu
 
    Read `.build/input-report.json`. A nonzero exit means the build differs, an asset changed, or the check failed. If assets changed, inspect fresh originals before changing the baseline or patch offsets. Never replace hashes solely to make a build pass.
 3. If inputs changed, rebuild the affected component using the notes below. Review the old/new material, menu, or LUT behavior. Update the appropriate input hashes only after understanding the changes. `build_all.py` deliberately fails when new outputs differ from the released PAKs; inspect those differences, then copy the accepted PAKs from `.build/paks` to `assets` and rerun the comparison.
-4. Run the control/menu tests, full build comparison, and GPU tests. Back up the installed two PAKs, three Lua files, mod `.ini`, and game options save before installing a candidate. Close the game first. Never restore a whole save over newer user progress as routine rollback.
+4. Run the control/menu tests, full build comparison, and GPU tests. Back up the installed two PAKs, Lua module folder, mod `.ini`, and game options save before installing a candidate. Close the game first. Never restore a whole save over newer user progress as routine rollback.
 5. Complete the in-game checklist below. Record pass/fail/not-tested, game build, renderer, UE4SS version, and any changed hashes in `docs/VALIDATION.md`.
 6. Only after successful retesting, update `steam_build` in `supported-inputs.json`. If code/assets changed, bump `VERSION` and the install/download notes, run `tools/record_payload.py`, review its diff, then run `tools/test.py` to package. Publish the ZIP and `SHA256SUMS.txt` from that tested commit. If no runtime changes were needed, a compatibility documentation update can suffice.
 7. Close the update issue after the tested baseline is pushed. The monitor will reopen it while the baseline remains behind.

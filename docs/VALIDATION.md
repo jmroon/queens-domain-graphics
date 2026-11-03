@@ -1,5 +1,18 @@
 # Validation record
 
+## Readability refactor (not released)
+
+Preferences and rendering are separate Lua modules; menu/native callbacks use
+descriptive names and expanded control flow. Build phases are named functions;
+GPU validation uses explicit inputs and owned D3D11 resources. Python/Lua style
+checks run in CI. Runtime behavior is compared with 51 transitions captured from
+release 1.0.1, including exact preference/backup contents and rollback. Rebuilt
+PAK asset contents remain byte-identical to 1.0.1.
+
+The installed game and published downloads are unchanged. No new in-game smoke
+test has been performed for the refactored Lua modules; this remains a release
+validation item. Shader/GPU and mock tests do not replace that check.
+
 ## Release 1.0.1: standalone packaging
 
 Adds an extract-and-play package with UE4SS 3.0.1. The six common mod payload hashes
