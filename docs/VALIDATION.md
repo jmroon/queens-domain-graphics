@@ -13,10 +13,13 @@ The local installation was updated from the verified mod-only package with a
 backup of affected mod files and settings. Existing preferences and loader files
 were preserved. Hardware/WARP GPU checks, source rebuild comparison, Lua
 regressions, 51-transition parity, formatting/lint, and package checks passed.
-No new in-game smoke test has been performed for the refactored Lua modules;
-menu, gameplay, and restart verification remain pending. Shader/GPU and mock
-tests do not replace that check. Steam baseline remains 26356968; DX12 remains
-unverified.
+On 2026-11-03, the user confirmed that saved settings and Video controls work
+after installing 1.0.2 and launching the game. The current launch log also confirms
+mod initialization, menu hook registration, and applying settings when the player
+is ready. This covers the initial in-game smoke test; an additional restart after
+changing settings, level travel, damage/cutscene behavior, and a fresh standalone
+installation were not independently retested for this release. Steam baseline
+remains 26356968; DX12 remains unverified.
 
 ## Release 1.0.1: standalone packaging
 
