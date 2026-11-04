@@ -2,7 +2,7 @@
 
 Adds persistent graphics controls to **Options → Video**, including **Original / Modern / Custom** presets. Smooth colour gradients keep the game's LUT-based grading, damage effects, and vignette available.
 
-**[Download the latest release](https://github.com/jmroon/queens-domain-graphics/releases/latest)** · [Build and retest](docs/MAINTENANCE.md) · [Source guide](docs/SOURCE_GUIDE.md)
+**[Comparisons & mod details](https://jmroon.github.io/queens-domain-graphics/)** · [Download the latest release](https://github.com/jmroon/queens-domain-graphics/releases/latest) · [Build and retest](docs/MAINTENANCE.md) · [Source guide](docs/SOURCE_GUIDE.md)
 
 ## Install
 
