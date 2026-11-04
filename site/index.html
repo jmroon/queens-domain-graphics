@@ -202,6 +202,65 @@
             >
           </figcaption>
         </figure>
+        <figure class="comparison-figure" data-comparison>
+          <div class="comparison-stage" style="--split: 50%">
+            <img
+              class="comparison-image"
+              src="images/overlook-modern.jpg"
+              width="2560"
+              height="1440"
+              alt="Modern preset overlooking the coastal ruins, with smoother fog and blue light gradients."
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="comparison-image comparison-before"
+              src="images/overlook-original-retro-off.jpg"
+              width="2560"
+              height="1440"
+              alt="Original graphics with Retro Resolution off overlooking the coastal ruins, with patterned dithering across fog, lights and distant detail."
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="image-label before-label"
+              >Original <small>Retro Resolution off</small></span
+            ><span class="image-label after-label">Modern</span>
+            <span class="comparison-divider" aria-hidden="true"
+              ><span>‹ ›</span></span
+            >
+          </div>
+          <div class="slider-controls">
+            <label for="overlook-slider">Reveal Original</label
+            ><input
+              id="overlook-slider"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Overlook comparison: percentage of Original visible"
+              aria-valuetext="50% Original, 50% Modern"
+            /><output for="overlook-slider">50%</output>
+            <button
+              class="fullscreen-button"
+              type="button"
+              aria-label="Open overlook comparison fullscreen"
+              hidden
+            >
+              Fullscreen
+            </button>
+          </div>
+          <figcaption>
+            <span
+              ><strong>The overlook</strong>
+              <span class="caption-detail"
+                >/ distant detail, fog &amp; lights</span
+              ></span
+            ><span class="image-links"
+              ><a href="images/overlook-original-retro-off.jpg">Original ↗</a
+              ><a href="images/overlook-modern.jpg">Modern ↗</a></span
+            >
+          </figcaption>
+        </figure>
         <noscript
           ><p>
             The sliders need JavaScript. Use the Original and Modern links below

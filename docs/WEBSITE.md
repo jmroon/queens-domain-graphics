@@ -8,7 +8,7 @@ When CSS or JavaScript changes, increment their `?v=` values in `site/index.html
 so returning visitors load matching assets instead of a cached older version.
 
 Preview from the repository root with `python -m http.server 8765 --directory site`,
-then open `http://localhost:8765`. Check both comparison sliders by dragging the
+then open `http://localhost:8765`. Check all comparison sliders by dragging the
 image and using the range control's arrow keys, Home and End. Also check a narrow
 mobile viewport, navigation anchors, expandable notes, images and download links.
 For each fullscreen button, check dragging and keyboard controls, then both Close
