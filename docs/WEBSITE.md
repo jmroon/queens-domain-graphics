@@ -9,6 +9,10 @@ Preview from the repository root with `python -m http.server 8765 --directory si
 then open `http://localhost:8765`. Check both comparison sliders by dragging the
 image and using the range control's arrow keys, Home and End. Also check a narrow
 mobile viewport, navigation anchors, expandable notes, images and download links.
+For each fullscreen button, check dragging and keyboard controls, then both Close
+and Escape. The slider value and keyboard focus should survive returning to the
+page. Browsers that deny native fullscreen should still show the full-window
+dialog; test this with an iframe whose `allow` attribute is `fullscreen 'none'`.
 
 The JPEGs in `site/images/` are the maintainer's unretouched gameplay screenshots,
 copied byte-for-byte from the Nexus release media. Do not regenerate or retouch

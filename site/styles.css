@@ -41,6 +41,7 @@ input {
 }
 a:focus-visible,
 summary:focus-visible,
+button:focus-visible,
 input:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 5px;
@@ -176,16 +177,11 @@ h1 em {
   color: var(--gold);
   font-style: normal;
 }
-.hero-lead {
-  font-size: 1.3rem;
-  line-height: 1.45;
-  margin-top: 28px;
-}
 .hero-description {
   max-width: 460px;
   color: #c2c9ba;
   font-size: 0.97rem;
-  margin-top: 16px;
+  margin-top: 28px;
 }
 .hero-actions {
   display: flex;
@@ -723,5 +719,63 @@ summary {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* A modal fills the viewport even where the browser disallows native fullscreen. */
+.fullscreen-button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+  color: var(--gold);
+  cursor: pointer;
+}
+.fullscreen-button:hover {
+  border-color: var(--gold);
+}
+.comparison-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+.comparison-dialog[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comparison-dialog::backdrop {
+  background: var(--bg);
+}
+.comparison-dialog .comparison-figure {
+  width: min(100%, calc((100dvh - 136px) * 16 / 9));
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .slider-controls {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .slider-controls input {
+    flex: 1;
+    min-width: 70px;
+  }
+  .slider-controls label {
+    font-size: 0.65rem;
+  }
+  .fullscreen-button {
+    padding: 8px;
+  }
+  .comparison-dialog {
+    padding: 10px;
   }
 }

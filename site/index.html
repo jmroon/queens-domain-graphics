@@ -11,7 +11,7 @@
     <meta property="og:title" content="Queen’s Domain Graphics" />
     <meta
       property="og:description"
-      content="A steadier picture. The same strange world. Compare Original and Modern graphics, with controls in the game’s own Video menu."
+      content="Compare Original and Modern graphics, with controls for anti-aliasing, dithering and colour gradients in the game’s Video menu."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -45,9 +45,6 @@
         <div class="hero-inner">
           <p class="eyebrow">A graphics mod by TheExodu5</p>
           <h1 id="title">Queen’s Domain<br /><em>Graphics</em></h1>
-          <p class="hero-lead">
-            A steadier picture.<br />The same strange world.
-          </p>
           <p class="hero-description">
             Reduce patterned dithering, smooth colour gradients and choose your
             anti-aliasing—all through the game’s own Video menu.
@@ -56,7 +53,7 @@
             <a class="button" href="#install"
               >Download v1.0.2 <span aria-hidden="true">↓</span></a
             ><a class="text-link" href="#compare"
-              >See the difference <span aria-hidden="true">↘</span></a
+              >View comparisons <span aria-hidden="true">↘</span></a
             >
           </div>
           <p class="hero-meta">
@@ -74,18 +71,17 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">01 / Look closer</p>
-            <h2 id="compare-title">
-              Original character.<br />Smoother presentation.
-            </h2>
+            <p class="eyebrow">01 / Comparisons</p>
+            <h2 id="compare-title">Original vs. Modern</h2>
           </div>
           <p>
-            Drag the divider, or focus the slider and use the arrow keys. Open
-            either full-size image to inspect individual pixels.
+            Drag the divider, or focus the slider and use the arrow keys. Choose
+            Fullscreen to enlarge the comparison, or open either full-size image
+            to inspect individual pixels.
           </p>
         </div>
         <p class="comparison-note">
-          <strong>A fair comparison:</strong> the before shots use Original
+          <strong>Comparison settings:</strong> the before shots use Original
           <em>with Retro Resolution off</em>. The after shots use Modern. These
           are unretouched gameplay captures; the camera and animated elements
           can shift slightly between shots.
@@ -126,6 +122,14 @@
               aria-label="Library comparison: percentage of Original visible"
               aria-valuetext="50% Original, 50% Modern"
             /><output for="library-slider">50%</output>
+            <button
+              class="fullscreen-button"
+              type="button"
+              aria-label="Open library comparison fullscreen"
+              hidden
+            >
+              Fullscreen
+            </button>
           </div>
           <figcaption>
             <span
@@ -177,6 +181,14 @@
               aria-label="Courtyard comparison: percentage of Original visible"
               aria-valuetext="50% Original, 50% Modern"
             /><output for="courtyard-slider">50%</output>
+            <button
+              class="fullscreen-button"
+              type="button"
+              aria-label="Open courtyard comparison fullscreen"
+              hidden
+            >
+              Fullscreen
+            </button>
           </div>
           <figcaption>
             <span
@@ -205,8 +217,8 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">02 / Make it yours</p>
-            <h2 id="settings-title">One preset. Or every detail.</h2>
+            <p class="eyebrow">02 / Graphics settings</p>
+            <h2 id="settings-title">Presets and individual controls</h2>
           </div>
           <p>
             Find the controls in <strong>Options → Video</strong>. Choices save
@@ -314,7 +326,6 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">03 / Into the game</p>
             <h2 id="install-title">Download &amp; install</h2>
           </div>
           <p>
@@ -390,8 +401,7 @@
       </section>
 
       <section class="section practical" aria-labelledby="practical-title">
-        <p class="eyebrow">Before you play</p>
-        <h2 id="practical-title">A few useful details</h2>
+        <h2 id="practical-title">Compatibility and troubleshooting</h2>
         <details open>
           <summary>Compatibility &amp; performance</summary>
           <div class="details-body">
