@@ -4,6 +4,8 @@ The GitHub Pages site lives in `site/`. It is plain HTML, CSS and JavaScript wit
 build dependencies. `.github/workflows/pages.yml` publishes only this directory
 when its files change on `main`, or on a manual workflow run. Repository Settings
 → Pages must use GitHub Actions as its publishing source.
+When CSS or JavaScript changes, increment their `?v=` values in `site/index.html`
+so returning visitors load matching assets instead of a cached older version.
 
 Preview from the repository root with `python -m http.server 8765 --directory site`,
 then open `http://localhost:8765`. Check both comparison sliders by dragging the
