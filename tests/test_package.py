@@ -43,7 +43,8 @@ class PackageTests(unittest.TestCase):
             mapped[destination] = self.mod.read(name)
         self.assertEqual(set(self.standalone.namelist()), set(mapped) | expected_loader)
         for name, data in mapped.items():
-            self.assertEqual(data, self.standalone.read(name), name)
+            if name != "INSTALL.txt":
+                self.assertEqual(data, self.standalone.read(name), name)
         self.assertEqual(
             {n.split("/")[0] for n in self.mod.namelist()},
             {"PAKs", "QDGraphics", "INSTALL.txt", "LICENSE", "THIRD-PARTY.txt"},
@@ -51,6 +52,12 @@ class PackageTests(unittest.TestCase):
         self.assertFalse(
             any(n.endswith((".dll", "mods.txt", "UE4SS-settings.ini")) for n in self.mod.namelist())
         )
+        for variant, archive in (("mod-only", self.mod), ("standalone", self.standalone)):
+            self.assertEqual(
+                archive.read("INSTALL.txt"),
+                (REPO / f"packaging/INSTALL-{variant}.txt").read_bytes(),
+            )
+        self.assertNotEqual(self.mod.read("INSTALL.txt"), self.standalone.read("INSTALL.txt"))
 
     def test_manual_install_in_both_loader_layouts_preserves_existing_files(self):
         for layout in ("", "ue4ss/"):

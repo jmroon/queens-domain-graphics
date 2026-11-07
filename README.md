@@ -10,11 +10,11 @@ Close the game and choose **one** download. Existing UE4SS users should use **Mo
 
 ### Standalone — no existing UE4SS
 
-Extract **QueensDomain-Graphics-Standalone-1.0.3.zip** into the game folder containing `QueensDomain.exe`, merging the included `QueensDomain` folder. It includes stable **UE4SS 3.0.1**, configured and ready to use. Do not extract Standalone over an existing UE4SS installation.
+Extract **QueensDomain-Graphics-Standalone-1.0.4.zip** into the game folder containing `QueensDomain.exe`, merging the included `QueensDomain` folder. It includes stable **UE4SS 3.0.1**, configured and ready to use. Do not extract Standalone over an existing UE4SS installation.
 
 ### Mod-only — existing UE4SS, either layout
 
-Extract **QueensDomain-Graphics-1.0.3.zip** to a temporary folder, then:
+Extract **QueensDomain-Graphics-1.0.4.zip** to a temporary folder, then:
 
 1. Copy the **two files inside `PAKs`** into the game's `QueensDomain/Content/Paks`.
 2. Copy the **whole `QDGraphics` folder** into your active UE4SS `Mods` folder:
@@ -26,7 +26,7 @@ Extract **QueensDomain-Graphics-1.0.3.zip** to a temporary folder, then:
 
 Use your existing folder structure as the guide; custom UE4SS setups can use another location. Keep one active copy of QDGraphics. Merge/replace its files when updating, but keep your loader, INI, and other mods. The included `enabled.txt` enables QDGraphics without replacing your mod list; if your list explicitly disables it, enable it there.
 
-Launch, load a save, and open **Options → Video → Graphics preset → Modern**. A fresh installation preserves your settings until you choose an option. A working v1.0.2 installation needs no update; this release changes packaging and instructions, not the graphics or saved settings.
+Launch, load a save, and open **Options → Video → Graphics preset → Modern**. A fresh installation preserves your settings until you choose an option. Existing installations need no update. Version 1.0.4 provides short, package-specific INSTALL.txt files; graphics, loaders, and saved settings are unchanged.
 
 ## Settings
 

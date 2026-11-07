@@ -28,7 +28,10 @@ uses the flat `Win64/Mods` layout and includes only the loader DLLs, upstream
 ConsoleEnablerMod/UEHelpers, license, debug-window-disabled settings, and minimal
 mod list. Mod-only contains `PAKs` and `QDGraphics`; its Lua folder is copied
 into whichever Mods directory the user already uses. Both packages must contain
-identical mod bytes despite different archive paths. Never derive release files
+identical mod bytes despite different archive paths. Each ZIP gets its own concise
+`INSTALL.txt` from `packaging/INSTALL-mod-only.txt` or `packaging/INSTALL-standalone.txt`.
+Keep those files to installation steps and a help link; settings, removal, and
+compatibility details belong in the README and mod page. Never derive release files
 from a live user's installation or include saves, caches, logs, or personal settings.
 
 For packaging-only changes with identical Lua/PAK hashes, run the package and Lua tests, compare loader bytes/configuration against the tested setup, and verify the clean-checkout CI ZIP hashes. The existing shader/GPU evidence still applies; a new full game/GPU retest is needed when the runtime, loader version, engine overrides, or affected assets change. State whether a fresh standalone launch was actually exercised. Include both ZIPs and the two-entry `SHA256SUMS.txt` in the release.

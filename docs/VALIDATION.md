@@ -1,5 +1,20 @@
 # Validation record
 
+## Release 1.0.4: package-specific installation notes, 2026-11-06
+
+Each ZIP now includes a short INSTALL.txt tailored to its installation method.
+The two source texts live under `packaging/`; full documentation remains in the
+README and on the mod page. Package paths, mod payload, and stable UE4SS 3.0.1
+loader/configuration are unchanged from v1.0.3. The existing stable/experimental
+DX11 and DX12 evidence below continues to apply; no fresh gameplay or GPU retest
+is needed for this documentation-only package change.
+
+Validation: all Lua tests (including 51 behavioral transitions), seven package
+tests, Ruff/StyLua checks, and `git diff --check` pass. ZIP comparison against
+v1.0.3 confirms identical paths and bytes except INSTALL.txt in both downloads.
+
+Publication pending.
+
 ## Release 1.0.3: installation layouts and experimental compatibility, 2026-11-06
 
 Standalone retains the previously tested stable UE4SS **3.0.1**, with the same

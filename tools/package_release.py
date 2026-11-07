@@ -16,7 +16,7 @@ def payload():
     for p in sorted((REPO / "src/QDGraphics/Scripts").glob("*.lua")):
         files["QueensDomain/Binaries/Win64/Mods/QDGraphics/Scripts/" + p.name] = p.read_bytes()
     files["QueensDomain/Binaries/Win64/Mods/QDGraphics/enabled.txt"] = b""
-    for name in ("INSTALL.txt", "LICENSE", "THIRD-PARTY.txt"):
+    for name in ("LICENSE", "THIRD-PARTY.txt"):
         files[name] = (REPO / name).read_bytes()
     return files
 
@@ -69,9 +69,11 @@ def package(ue4ss_archive=None):
         out / f"QueensDomain-Graphics-{version}.zip",
         out / f"QueensDomain-Graphics-Standalone-{version}.zip",
     ]
-    checksums = write_zip(targets[0], mod_only_payload(files)) + write_zip(
-        targets[1], dict(files, **loader)
-    )
+    mod_only = mod_only_payload(files)
+    standalone = dict(files, **loader)
+    for variant, contents in (("mod-only", mod_only), ("standalone", standalone)):
+        contents["INSTALL.txt"] = (REPO / f"packaging/INSTALL-{variant}.txt").read_bytes()
+    checksums = write_zip(targets[0], mod_only) + write_zip(targets[1], standalone)
     (out / "SHA256SUMS.txt").write_text(checksums, encoding="ascii")
     return targets
 

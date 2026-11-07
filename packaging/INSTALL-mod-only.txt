@@ -1,0 +1,14 @@
+QUEEN'S DOMAIN GRAPHICS — MOD-ONLY
+
+Requires an existing UE4SS installation.
+
+1. Close the game and extract this ZIP somewhere temporary.
+2. Copy both files inside PAKs to QueensDomain/Content/Paks.
+3. Copy the whole QDGraphics folder into your active UE4SS Mods folder:
+   • Flat layout: QueensDomain/Binaries/Win64/Mods
+   • Nested layout: QueensDomain/Binaries/Win64/ue4ss/Mods
+4. Launch, load your save, then open Options → Video → Graphics preset → Modern.
+
+Follow your existing folder structure. Keep your loader, configuration and other mods. When updating, replace only the mod's files.
+
+Help: https://github.com/jmroon/queens-domain-graphics

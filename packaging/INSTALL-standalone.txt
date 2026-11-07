@@ -1,0 +1,9 @@
+QUEEN'S DOMAIN GRAPHICS — STANDALONE
+
+Includes stable UE4SS 3.0.1. If UE4SS is already installed, use the Mod-only download instead.
+
+1. Close the game.
+2. Extract this ZIP into the game folder containing QueensDomain.exe, merging folders.
+3. Launch, load your save, then open Options → Video → Graphics preset → Modern.
+
+Help: https://github.com/jmroon/queens-domain-graphics
