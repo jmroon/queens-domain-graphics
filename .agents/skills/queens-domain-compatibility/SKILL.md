@@ -36,6 +36,9 @@ making a compatibility claim.
    note, and Nexus compatibility paragraph; record pending publication explicitly.
    An unchanged working mod needs a dated compatibility note, not replacement
    ZIPs or a version bump. Preserve release-time history and published checksums.
+   Keep public compatibility notes brief and in the author's first-person voice
+   ("I tested"), not "the maintainer confirmed". Put detailed test evidence in
+   `docs/VALIDATION.md`, not the Nexus description or other public summaries.
    Close the private monitor issue only after the baseline commit is pushed,
    linking the validation result. Publication follows the user's authorized scope;
    the checklist itself does not grant permission to post or deploy.

@@ -49,6 +49,12 @@ tested renderers consistently. Distinguish automated results from user-reported
 gameplay and list checks not repeated. An alert for an older build is not proof
 that the intervening build was tested.
 
+Public compatibility notes should be two or three short sentences in the
+author's voice ("I tested"), giving the build, renderers, date, and whether an
+update is needed. Do not narrate "the maintainer confirmed" or copy the test
+checklist, implementation details, and unrelated feature claims into the public
+paragraph. Keep detailed evidence and untested cases in `docs/VALIDATION.md`.
+
 | Location | After a successful compatibility retest |
 | --- | --- |
 | `docs/VALIDATION.md` | Add dated evidence, changed/unchanged inputs, gameplay scope, limitations, and whether a new mod version is needed. Preserve previous entries. |
@@ -73,8 +79,8 @@ pending rather than calling the post-test work complete. Record completion or
 pending destinations in the validation entry without copying private logs or
 account details into the public repository.
 
-Suggested short note: "Retested <date>: v<version> works with Steam build <build>
-in <tested renderers>. No mod update or reinstall needed. <validation link>"
+Suggested short note: "I tested v<version> on Steam build <build> with <tested
+renderers> (<date>). No mod update or reinstall is needed."
 
 ## In-game checklist
 
