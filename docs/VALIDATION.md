@@ -13,7 +13,20 @@ Validation: all Lua tests (including 51 behavioral transitions), seven package
 tests, Ruff/StyLua checks, and `git diff --check` pass. ZIP comparison against
 v1.0.3 confirms identical paths and bytes except INSTALL.txt in both downloads.
 
-Publication pending.
+Published as [v1.0.4](https://github.com/jmroon/queens-domain-graphics/releases/tag/v1.0.4)
+from `8acaf9ef9360cfb629ed50bff6c7d489debba9f5`. [CI](https://github.com/jmroon/queens-domain-graphics/actions/runs/42328278636)
+passed and reproduced both uploaded ZIP hashes; [Pages](https://github.com/jmroon/queens-domain-graphics/actions/runs/42328278723)
+deployed successfully. The live page renders correctly, links to v1.0.4 downloads,
+and reports no browser console errors.
+
+- Mod-only SHA-256: `e006b9c324b15e53d56cab02d981c69d4d35f28b6eca531bf2f9549afa7aefc8`.
+- Standalone SHA-256: `96d74d71076df51d37e64433653db9418f40b79c8942e73ea30f50fd2912fd97`.
+- Nexus mod 13: v1.0.4 Mod-only file 57 and primary Standalone file 58 are
+  available, with scan links matching the ZIP hashes. Previous v1.0.3 files
+  are archived, not deleted. Version and description were saved and verified.
+- The existing [reply on issue #2](https://github.com/jmroon/queens-domain-graphics/issues/2#issuecomment-6700797283)
+  now links to v1.0.4; the rest of the response is unchanged.
+- The installed game, loader, and personal settings were not modified.
 
 ## Release 1.0.3: installation layouts and experimental compatibility, 2026-11-06
 
