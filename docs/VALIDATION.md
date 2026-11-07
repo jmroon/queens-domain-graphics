@@ -29,6 +29,14 @@ controller navigation, and exhaustive damage/cutscene/palette coverage were
 not separately repeated for this update. Historical release records below
 retain their original tested builds.
 
+Post-test publication completed on 2026-11-06: the baseline, README, and website
+are current; the [v1.0.2 release](https://github.com/jmroon/queens-domain-graphics/releases/tag/v1.0.2)
+has a dated retest note, and the [Nexus description](https://www.nexusmods.com/queensdomain/mods/13)
+shows the tested build and renderers. Both were read back after saving. The
+private monitor alert is closed with linked validation evidence, and a manual
+monitor run passed against the new baseline. Release asset IDs and digests were
+verified unchanged. Packaged installation notes remain the release-time snapshot.
+
 ## Release 1.0.2: readability refactor
 
 Preferences and rendering are separate Lua modules; menu/native callbacks use

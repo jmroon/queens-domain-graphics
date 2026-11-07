@@ -1,6 +1,6 @@
 ---
 name: queens-domain-compatibility
-description: Retest and maintain the Queen's Domain graphics mod after Steam updates, shader or menu changes, or before releases. Covers original-asset comparison, source rebuilds, GPU and Lua checks, guided in-game validation, and the private Steam update monitor.
+description: Retest and maintain the Queen's Domain graphics mod after Steam updates, shader or menu changes, or before releases. Covers asset/build/GPU/Lua checks, guided gameplay validation, and post-test documentation on GitHub, the website, Nexus, and the private update monitor.
 ---
 
 # Queens Domain Compatibility
@@ -30,10 +30,15 @@ making a compatibility claim.
    and Original-mode behavior. Revalidate shader register/layout assumptions and
    menu export indices against updated originals. Never reintroduce periodic
    object scanning; it previously caused one-second frametime spikes.
-5. After actual retesting, update the tested Steam baseline and validation record.
-   Rebuild/release only when necessary. An unchanged working mod can receive a
-   compatibility documentation update. Close the private monitor issue after the
-   baseline commit is pushed; closing it alone does not acknowledge a build.
+5. After actual retesting, complete the maintenance guide's
+   [post-test publication checklist](../../../docs/MAINTENANCE.md#post-test-publication-checklist).
+   Update the tested baseline, evidence, README, website, current GitHub release
+   note, and Nexus compatibility paragraph; record pending publication explicitly.
+   An unchanged working mod needs a dated compatibility note, not replacement
+   ZIPs or a version bump. Preserve release-time history and published checksums.
+   Close the private monitor issue only after the baseline commit is pushed,
+   linking the validation result. Publication follows the user's authorized scope;
+   the checklist itself does not grant permission to post or deploy.
 
 The monitor repository is `jmroon/queens-domain-graphics-monitor`. It files one
 assigned issue per untested public Steam build, in that private repository, using

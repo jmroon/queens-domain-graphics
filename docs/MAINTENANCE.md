@@ -40,7 +40,41 @@ For packaging-only changes with identical Lua/PAK hashes, run the package and Lu
 4. Run the control/menu tests, full build comparison, and GPU tests. Back up the installed two PAKs, Lua module folder, mod `.ini`, and game options save before installing a candidate. Close the game first. Never restore a whole save over newer user progress as routine rollback.
 5. Complete the in-game checklist below. Record pass/fail/not-tested, game build, renderer, UE4SS version, and any changed hashes in `docs/VALIDATION.md`.
 6. Only after successful retesting, update `steam_build` in `supported-inputs.json`. If code/assets changed, bump `VERSION` and the install/download notes, run `tools/record_payload.py`, review its diff, then run `tools/test.py` to package. Publish the ZIP and `SHA256SUMS.txt` from that tested commit. If no runtime changes were needed, a compatibility documentation update can suffice.
-7. Close the update issue after the tested baseline is pushed. The monitor will reopen it while the baseline remains behind.
+7. Complete the post-test publication checklist below. Closing an issue alone does not acknowledge the tested build.
+
+## Post-test publication checklist
+
+Use the installed build actually tested, test date, mod version, and explicitly
+tested renderers consistently. Distinguish automated results from user-reported
+gameplay and list checks not repeated. An alert for an older build is not proof
+that the intervening build was tested.
+
+| Location | After a successful compatibility retest |
+| --- | --- |
+| `docs/VALIDATION.md` | Add dated evidence, changed/unchanged inputs, gameplay scope, limitations, and whether a new mod version is needed. Preserve previous entries. |
+| `supported-inputs.json` | Advance `steam_build` only after validation. Change asset hashes only for understood, accepted input changes. |
+| `README.md` and `site/index.html` | Update current compatibility build/date/renderers and say whether existing users need a new download. Verify the deployed page. |
+| Current `docs/RELEASE-<version>.md` and GitHub release body | Add a short dated compatibility note linking the validation record. Read the live body first and preserve author edits; it may differ from the source note. Keep the original release-time evidence. |
+| [Nexus description](https://www.nexusmods.com/queensdomain/mods/13) | Update only the full description's Compatibility paragraph, then verify it is saved and visible. Keep the short card description, version, files, artwork, and unrelated prose unchanged for a compatibility-only retest. The current editor is `/games/queensdomain/mods/13/edit/general`; do not use the removed game-suggestion listing. |
+| [Private monitor issues](https://github.com/jmroon/queens-domain-graphics-monitor/issues) | After pushing the tested baseline, record the tested build and validation link on the relevant alert and close it. Check the next monitor run or manually run its existing workflow when appropriate. If metadata is stale, report that separately; never regress the tested baseline just to satisfy the monitor. |
+
+For an unchanged working mod, leave `VERSION`, packaged `INSTALL.txt`, existing
+release ZIPs, and `SHA256SUMS.txt` unchanged. Their tested-build statements are a
+snapshot at packaging time; current online notes carry later compatibility
+results. Do not overwrite an existing version's downloads solely to refresh
+documentation. If a new package is necessary, follow the release/build process
+and update its installation snapshot then.
+
+Within the user's publication authorization, push the documentation, verify CI
+and Pages, update the existing GitHub release and Nexus description, and finish
+the monitor issue with a link to the committed evidence. Read back each edited
+surface. If access or approval blocks one destination, list that destination as
+pending rather than calling the post-test work complete. Record completion or
+pending destinations in the validation entry without copying private logs or
+account details into the public repository.
+
+Suggested short note: "Retested <date>: v<version> works with Steam build <build>
+in <tested renderers>. No mod update or reinstall needed. <validation link>"
 
 ## In-game checklist
 

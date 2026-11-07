@@ -6,4 +6,6 @@ No new graphics settings or intended visual changes. The shader/menu PAKs are un
 
 Validation: 51 reference behavior transitions, Lua regressions, package checks, source rebuild comparison, and hardware/WARP shader checks pass. The user confirmed saved settings and Video controls work after updating and launching the game. Broader gameplay and fresh standalone-install retesting remain outside this smoke test. Tested asset baseline: Steam build 26356968 / UE4.27 / D3D11 and DX12. On 2026-11-03, the maintainer also confirmed that the mod works in DX12 mode.
 
+**Compatibility retest — 2026-11-06:** v1.0.2 works with Steam build **26496428** in **D3D11 and DX12**. Automated asset, rebuild, shader, Lua, and package checks passed; the maintainer confirmed controls, level/restart persistence, and no new periodic stutters in both renderers. No mod update or reinstall is needed. [Validation details and limits](https://github.com/jmroon/queens-domain-graphics/blob/main/docs/VALIDATION.md#steam-update-26496428-compatibility-confirmed-2026-11-06).
+
 [Settings](https://github.com/jmroon/queens-domain-graphics#settings) | [Source guide](https://github.com/jmroon/queens-domain-graphics/blob/main/docs/SOURCE_GUIDE.md)
