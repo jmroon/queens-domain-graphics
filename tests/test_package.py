@@ -29,16 +29,60 @@ class PackageTests(unittest.TestCase):
             archive.close()
 
     def test_exact_separation_and_unmodified_mod_payload(self):
-        expected_extra = {
+        expected_loader = {
             BINARIES + n
             for n in (*ORIGINAL_FILES, "UE4SS-settings.ini", "Mods/mods.txt", "UE4SS-LICENSE.txt")
         }
-        self.assertEqual(set(self.standalone.namelist()) - set(self.mod.namelist()), expected_extra)
-        for n in self.mod.namelist():
-            self.assertEqual(self.mod.read(n), self.standalone.read(n), n)
+        mapped = {}
+        for name in self.mod.namelist():
+            destination = name
+            if name.startswith("PAKs/"):
+                destination = "QueensDomain/Content/Paks/" + name.removeprefix("PAKs/")
+            elif name.startswith("QDGraphics/"):
+                destination = BINARIES + "Mods/" + name
+            mapped[destination] = self.mod.read(name)
+        self.assertEqual(set(self.standalone.namelist()), set(mapped) | expected_loader)
+        for name, data in mapped.items():
+            self.assertEqual(data, self.standalone.read(name), name)
+        self.assertEqual(
+            {n.split("/")[0] for n in self.mod.namelist()},
+            {"PAKs", "QDGraphics", "INSTALL.txt", "LICENSE", "THIRD-PARTY.txt"},
+        )
         self.assertFalse(
             any(n.endswith((".dll", "mods.txt", "UE4SS-settings.ini")) for n in self.mod.namelist())
         )
+
+    def test_manual_install_in_both_loader_layouts_preserves_existing_files(self):
+        for layout in ("", "ue4ss/"):
+            with self.subTest(layout=layout), tempfile.TemporaryDirectory() as td:
+                root = Path(td)
+                loader = root / BINARIES / layout
+                existing = {
+                    root / BINARIES / "dwmapi.dll": b"existing proxy",
+                    loader / "UE4SS.dll": b"existing loader",
+                    loader / "UE4SS-settings.ini": b"custom configuration",
+                    loader / "Mods/mods.txt": b"OtherMod : 1\n",
+                    loader / "Mods/mods.json": b'{"OtherMod": {"enabled": true}}',
+                    loader / "Mods/OtherMod/Scripts/main.lua": b"other mod",
+                }
+                for path, data in existing.items():
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(data)
+                # Follow INSTALL.txt: copy the PAKs and the whole QDGraphics folder.
+                for name in self.mod.namelist():
+                    if name.startswith("PAKs/"):
+                        target = root / "QueensDomain/Content/Paks" / Path(name).name
+                    elif name.startswith("QDGraphics/"):
+                        target = loader / "Mods" / name
+                    else:
+                        continue
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(self.mod.read(name))
+                for path, data in existing.items():
+                    self.assertEqual(path.read_bytes(), data)
+                self.assertTrue((loader / "Mods/QDGraphics/Scripts/main.lua").is_file())
+                self.assertTrue((loader / "Mods/QDGraphics/enabled.txt").is_file())
+                self.assertEqual(len(list((root / "QueensDomain/Content/Paks").glob("*.pak"))), 2)
 
     def test_upstream_binaries_helpers_and_license_preserved(self):
         for name in ORIGINAL_FILES:

@@ -51,7 +51,7 @@
           </p>
           <div class="hero-actions">
             <a class="button" href="#install"
-              >Download v1.0.2 <span aria-hidden="true">↓</span></a
+              >Download v1.0.3 <span aria-hidden="true">↓</span></a
             ><a class="text-link" href="#compare"
               >View comparisons <span aria-hidden="true">↘</span></a
             >
@@ -388,7 +388,7 @@
             <h2 id="install-title">Download &amp; install</h2>
           </div>
           <p>
-            Version 1.0.2 · Free &amp; open source<br />Choose
+            Version 1.0.3 · Free &amp; open source<br />Choose
             <strong>one</strong> package below.
           </p>
         </div>
@@ -397,12 +397,11 @@
             <span class="download-note">First install · no existing UE4SS</span>
             <h3>Standalone</h3>
             <p>
-              Includes the tested UE4SS 3.0.1 loader, configured and ready to
-              use.
+              Includes stable UE4SS 3.0.1, configured and ready to use.
             </p>
             <a
               class="button"
-              href="https://github.com/jmroon/queens-domain-graphics/releases/download/v1.0.2/QueensDomain-Graphics-Standalone-1.0.2.zip"
+              href="https://github.com/jmroon/queens-domain-graphics/releases/download/v1.0.3/QueensDomain-Graphics-Standalone-1.0.3.zip"
               >Download Standalone <span aria-hidden="true">↓</span></a
             ><small>ZIP · 5.3 MB</small>
           </article>
@@ -410,14 +409,14 @@
             <span class="download-note">Existing UE4SS · mod updates</span>
             <h3>Mod-only</h3>
             <p>
-              Adds the graphics mod while preserving your existing loader setup
-              and other mods.
+              Separate PAKs and QDGraphics folders for your existing flat or
+              nested UE4SS installation. No loader files included.
             </p>
             <a
               class="button secondary"
-              href="https://github.com/jmroon/queens-domain-graphics/releases/download/v1.0.2/QueensDomain-Graphics-1.0.2.zip"
+              href="https://github.com/jmroon/queens-domain-graphics/releases/download/v1.0.3/QueensDomain-Graphics-1.0.3.zip"
               >Download Mod-only <span aria-hidden="true">↓</span></a
-            ><small>ZIP · 46 KB</small>
+            ><small>ZIP · 47 KB</small>
           </article>
         </div>
         <ol class="install-steps">
@@ -429,10 +428,12 @@
             >
           </li>
           <li>
-            <strong>Extract your chosen ZIP there.</strong
+            <strong>Install the package you chose.</strong
             ><span
-              >Place it beside <code>QueensDomain.exe</code>, merging the
-              included <code>QueensDomain</code> folder.</span
+              >Standalone: extract beside <code>QueensDomain.exe</code>, merging
+              folders. Mod-only: copy the two files inside <code>PAKs</code> to
+              <code>QueensDomain/Content/Paks</code>, and the whole
+              <code>QDGraphics</code> folder to your active UE4SS Mods folder.</span
             >
           </li>
           <li>
@@ -448,12 +449,19 @@
           option. This mod uses both PAK assets and UE4SS: placing the whole
           download in <code>~mods</code> is not sufficient.
         </p>
+        <p class="install-note">
+          Mod-only destinations: <code>QueensDomain/Binaries/Win64/Mods</code>
+          for the usual stable layout, or <code>QueensDomain/Binaries/Win64/ue4ss/Mods</code>
+          for the usual experimental layout. Follow your existing folder structure.
+          Do not install Standalone over an existing loader.
+          <a href="https://github.com/jmroon/queens-domain-graphics#install">Full installation instructions</a>.
+        </p>
         <div class="release-links">
           <a
             href="https://github.com/jmroon/queens-domain-graphics/releases/latest"
             >Latest release &amp; notes ↗</a
           ><a
-            href="https://github.com/jmroon/queens-domain-graphics/releases/download/v1.0.2/SHA256SUMS.txt"
+            href="https://github.com/jmroon/queens-domain-graphics/releases/download/v1.0.3/SHA256SUMS.txt"
             >Checksums ↗</a
           >
         </div>
@@ -465,11 +473,10 @@
           <summary>Compatibility &amp; performance</summary>
           <div class="details-body">
             <p>
-              Tested on Windows with Steam build <strong>26496428</strong>,
-              UE4.27, UE4SS 3.0.1, and <strong>D3D11 / DX12</strong>. The
-              maintainer confirmed controls, level/restart persistence, and no
-              new periodic stutters in both renderers on 6 November 2026.
-              Version 1.0.2 needs no update.
+              I tested stable UE4SS 3.0.1 and experimental 3.0.1-1217-g4fb9b615
+              on Steam build <strong>26496428</strong> with <strong>DX11 and DX12</strong>
+              (6 November 2026). Standalone keeps stable 3.0.1. Working v1.0.2
+              installations do not need an update.
             </p>
             <p>
               Smooth gradients add shader work; the cost depends on resolution
@@ -510,7 +517,7 @@
               </li>
               <li>
                 Remove <code>QDGraphics</code> from
-                <code>QueensDomain/Binaries/Win64/Mods</code>.
+                your active UE4SS <code>Mods</code> folder.
               </li>
             </ul>
             <p>

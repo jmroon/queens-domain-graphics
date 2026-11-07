@@ -21,6 +21,18 @@ def payload():
     return files
 
 
+def mod_only_payload(files):
+    """Separate assets from Lua so users select their existing loader's Mods folder."""
+    result = {}
+    for name, data in files.items():
+        if name.startswith("QueensDomain/Content/Paks/"):
+            name = "PAKs/" + name.removeprefix("QueensDomain/Content/Paks/")
+        elif name.startswith("QueensDomain/Binaries/Win64/Mods/"):
+            name = name.removeprefix("QueensDomain/Binaries/Win64/Mods/")
+        result[name] = data
+    return result
+
+
 def write_zip(target, files):
     with zipfile.ZipFile(target, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(files.items()):
@@ -57,7 +69,9 @@ def package(ue4ss_archive=None):
         out / f"QueensDomain-Graphics-{version}.zip",
         out / f"QueensDomain-Graphics-Standalone-{version}.zip",
     ]
-    checksums = write_zip(targets[0], files) + write_zip(targets[1], dict(files, **loader))
+    checksums = write_zip(targets[0], mod_only_payload(files)) + write_zip(
+        targets[1], dict(files, **loader)
+    )
     (out / "SHA256SUMS.txt").write_text(checksums, encoding="ascii")
     return targets
 

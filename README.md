@@ -6,15 +6,27 @@ Adds persistent graphics controls to **Options → Video**, including **Original
 
 ## Install
 
-1. Close the game and choose a download from Releases:
-   - **Standalone** (`QueensDomain-Graphics-Standalone-1.0.2.zip`): includes the tested UE4SS 3.0.1 loader, configured and ready. Use this if you do **not** already have UE4SS installed.
-   - **Mod-only** (`QueensDomain-Graphics-1.0.2.zip`): use this if UE4SS is already installed, preserving its configuration and other mods.
-2. Extract the chosen ZIP into the **Steam game folder containing `QueensDomain.exe`**, merging the included `QueensDomain` folder.
-3. Launch, load a save, and open **Options → Video → Graphics preset → Modern**. No configuration editing is needed for standalone.
+Close the game and choose **one** download. Existing UE4SS users should use **Mod-only** to keep their loader and other mods intact.
 
-Standalone includes loader configuration and `Mods/mods.txt`; use mod-only for updates to an existing UE4SS installation. If installing UE4SS manually, extract the basic **[UE4SS 3.0.1](https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1)** package into `QueensDomain/Binaries/Win64`, beside `QueensDomain-Win64-Shipping.exe`, before adding mod-only.
+### Standalone — no existing UE4SS
 
-The included `QDGraphics/enabled.txt` enables the mod without replacing `mods.txt`. A fresh installation preserves your existing settings until you choose an option. The ZIP uses UE4SS 3.0.1's standard `Win64/Mods` layout; if you deliberately use a different UE4SS working directory, place `QDGraphics` in that directory's `Mods` folder instead.
+Extract **QueensDomain-Graphics-Standalone-1.0.3.zip** into the game folder containing `QueensDomain.exe`, merging the included `QueensDomain` folder. It includes stable **UE4SS 3.0.1**, configured and ready to use. Do not extract Standalone over an existing UE4SS installation.
+
+### Mod-only — existing UE4SS, either layout
+
+Extract **QueensDomain-Graphics-1.0.3.zip** to a temporary folder, then:
+
+1. Copy the **two files inside `PAKs`** into the game's `QueensDomain/Content/Paks`.
+2. Copy the **whole `QDGraphics` folder** into your active UE4SS `Mods` folder:
+
+| Existing loader layout | Usual destination for QDGraphics |
+| --- | --- |
+| Stable 3.0.1 / flat | `QueensDomain/Binaries/Win64/Mods/QDGraphics` |
+| Experimental / nested | `QueensDomain/Binaries/Win64/ue4ss/Mods/QDGraphics` |
+
+Use your existing folder structure as the guide; custom UE4SS setups can use another location. Keep one active copy of QDGraphics. Merge/replace its files when updating, but keep your loader, INI, and other mods. The included `enabled.txt` enables QDGraphics without replacing your mod list; if your list explicitly disables it, enable it there.
+
+Launch, load a save, and open **Options → Video → Graphics preset → Modern**. A fresh installation preserves your settings until you choose an option. A working v1.0.2 installation needs no update; this release changes packaging and instructions, not the graphics or saved settings.
 
 ## Settings
 
@@ -51,12 +63,18 @@ qd_defaults
 
 ## Compatibility and removal
 
-Tested with **Steam build 26496428**, **UE4.27**, **UE4SS 3.0.1**, and **D3D11 / DX12**. On 2026-11-06, the maintainer confirmed preset and effect controls, level/restart persistence, and no new periodic stutters in both renderers. Version 1.0.2 needs no update. Smooth modes increase LUT samples from 2 to 16 per pixel; the performance cost depends on resolution and hardware. The Lua controls use events, with no polling timer or per-frame callback.
+I tested the mod with stable **UE4SS 3.0.1** and experimental **3.0.1-1217-g4fb9b615** on Steam build **26496428**, in **DX11 and DX12** (6 November 2026). Standalone continues to bundle stable 3.0.1. Later experimental builds need their own testing.
+
+Smooth gradients add shader work; the performance cost depends on resolution and hardware.
 
 Updates can affect the three overridden assets: `DitherBase`, `PixelFilter_MPC`, and `Video_OptionsList`. Other mods replacing them can conflict. This is a PAK **and** Lua mod; putting everything in `~mods` is insufficient. Original game PAKs remain untouched.
 
 To uninstall, close the game and remove `QueensDomain_Graphics_P.pak`, `QueensDomain_GraphicsMenu_P.pak` from `QueensDomain/Content/Paks`, and the `QDGraphics` folder from UE4SS's `Mods`. Keep other mods and saves. Select Original before uninstalling if you want stock resolution behavior restored. You may also delete the mod's `.ini` and `.ini.bak` to clear its preferences.
 
-If you used standalone and **no other mods use UE4SS**, you can also remove its `dwmapi.dll`, `UE4SS.dll`, `UE4SS-settings.ini`, `UE4SS-LICENSE.txt`, and bundled `Mods/ConsoleEnablerMod`, `Mods/shared/UEHelpers`, and `Mods/mods.txt` from `QueensDomain/Binaries/Win64`. Keep the loader and shared files if you have added other UE4SS mods.
+If you used standalone and **no other mods use UE4SS**, you can also remove its `dwmapi.dll`, `UE4SS.dll`, `UE4SS-settings.ini`, `UE4SS-LICENSE.txt`, and bundled `Mods/ConsoleEnablerMod`, `Mods/shared/UEHelpers`, and `Mods/mods.txt` from `QueensDomain/Binaries/Win64`. Keep the loader and shared files if other mods use them.
+
+### Menu appears, but controls do nothing?
+
+The PAK adds the menu rows; Lua makes them work. Check that `QDGraphics/Scripts/main.lua` is in the **active** UE4SS `Mods` folder, then inspect that loader's `UE4SS.log` after launching. In the new layout it is `QueensDomain/Binaries/Win64/ue4ss/UE4SS.log`; older flat installs use `Win64/UE4SS.log`. If reporting a problem, include that log, the UE4SS version, and which download you installed. A visible Modern label alone does not prove Lua loaded.
 
 Original code and documentation are MIT licensed. Game-derived assets retain their owners' rights; see [THIRD-PARTY.txt](THIRD-PARTY.txt).

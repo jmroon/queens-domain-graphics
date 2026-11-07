@@ -20,11 +20,47 @@ The builder downloads official repak 0.2.3, UAssetGUI 1.1.0, and cmd_Decompiler 
 
 `build_all.py` compares every extracted asset byte with the committed release PAKs. PAK entry ordering may vary; matching asset contents establishes the rebuild result. `tools/test.py` runs Lua mock integration tests, creates both deterministic release ZIPs under `dist`, and tests the real loader/package contents. It checks `release-files.json` for the common mod payload. CI runs these tests and package checks without needing the game. CI does **not** substitute for GPU or in-game tests.
 
-Packaging automatically downloads the pinned official UE4SS 3.0.1 basic archive into `.tools`, verifying its SHA-256 before reading any files. An offline build can use `python tools/package_release.py --ue4ss-archive <archive.zip>`; for `tools/test.py`, place the same archive at `.tools/UE4SS_v3.0.1.zip`. Standalone adds only the two loader DLLs, upstream ConsoleEnablerMod/UEHelpers, license, debug-GUI-disabled settings, and a mod list enabling QDGraphics and ConsoleEnablerMod. Never derive these files from a live user's installation. Do not include saves, caches, logs, personal settings, or unrelated helper mods.
+Standalone bundles stable UE4SS 3.0.1, pinned by archive URL and SHA-256 in
+`tools/ue4ss.py`. Experimental compatibility testing does not change that default.
+An offline build can use `python tools/package_release.py --ue4ss-archive <archive.zip>`;
+for `tools/test.py`, place the archive at `.tools/UE4SS_v3.0.1.zip`. Standalone
+uses the flat `Win64/Mods` layout and includes only the loader DLLs, upstream
+ConsoleEnablerMod/UEHelpers, license, debug-window-disabled settings, and minimal
+mod list. Mod-only contains `PAKs` and `QDGraphics`; its Lua folder is copied
+into whichever Mods directory the user already uses. Both packages must contain
+identical mod bytes despite different archive paths. Never derive release files
+from a live user's installation or include saves, caches, logs, or personal settings.
 
 For packaging-only changes with identical Lua/PAK hashes, run the package and Lua tests, compare loader bytes/configuration against the tested setup, and verify the clean-checkout CI ZIP hashes. The existing shader/GPU evidence still applies; a new full game/GPU retest is needed when the runtime, loader version, engine overrides, or affected assets change. State whether a fresh standalone launch was actually exercised. Include both ZIPs and the two-entry `SHA256SUMS.txt` in the release.
 
 `check_biased_shader.py` runs the exact rebuilt lookup blocks on D3D11 hardware and WARP, compares them with an independent CPU reference across all four game LUTs, and asks both drivers to create the complete pixel shaders. It requires a working D3D11 device, and writes reports under `.build/reports/gpu`.
+
+## Testing another UE4SS version
+
+1. Choose an official numbered experimental archive and record its full version,
+   immutable filename, release URL, and SHA-256. Verify the download before
+   extraction. Inspect upstream layout, helper scripts, configuration defaults,
+   and license; never assume the previous INI is suitable.
+2. With the game closed, back up the affected loader files, mod payload, and
+   preferences. Keep old and new loader files separate. For a flat-to-nested
+   migration, retire the root DLL/INI and preserve the old Mods folder. Prepare
+   a rollback that restores the old loader without restoring whole saves or
+   overwriting new gameplay progress.
+3. Install a minimal candidate using the verified upstream loader contents. Check
+   the fresh log and loaded DLL path/version; then exercise the in-game checklist
+   in each renderer being claimed. A menu row supplied by the PAK is not evidence
+   that Lua loaded. Record any API changes and tests not repeated.
+4. Keep stable 3.0.1 as the bundled baseline unless changing it is explicitly
+   agreed. Record additional tested versions separately in `supported-inputs.json`.
+   Update package paths/tests and `release-files.json` only when needed.
+   Confirm that mod-only preserves an existing loader, mod lists, and other mods;
+   confirm that standalone enables only the intended helpers. Compare every
+   installed runtime file with the final standalone ZIP.
+5. After gameplay passes, update validation evidence and the tested-version
+   record. Bump the release only if packages change, updating README, INSTALL,
+   third-party notices, release notes, and website downloads. Document both
+   mod-only folder destinations and keep Standalone instructions distinct. Preserve older release assets. Do not
+   promise compatibility with every later experimental build or every other mod.
 
 ## After a Steam update
 

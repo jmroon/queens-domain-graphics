@@ -1,5 +1,50 @@
 # Validation record
 
+## Release 1.0.3: installation layouts and experimental compatibility, 2026-11-06
+
+Standalone retains the previously tested stable UE4SS **3.0.1**, with the same
+loader/helper bytes and configuration as v1.0.2. Mod-only now contains `PAKs`
+and `QDGraphics` folders; users copy them to the game's Paks and their active
+UE4SS Mods folder, respectively. Lua and PAK bytes are unchanged from v1.0.2.
+The canonical runtime manifest keeps the standalone's flat installation paths.
+
+Experimental compatibility was also tested on 2026-11-06 against Steam build
+26496428, using official UE4SS `3.0.1-1217-g4fb9b615` from `experimental2`.
+Its ZIP SHA-256 is
+`fbdacd0fae434e23d53b1181f6b085219d7cbf7e2cc8a13a00303f842c38194f`.
+That experimental archive is **not** bundled in either released download.
+
+The game was closed before the loader swap. The previous root loader files,
+mod payload, and affected preferences were backed up. The old root Mods folder
+was retained, and rollback restores the old loader without restoring saves.
+All backup hashes and unchanged preferences were verified. All 15 installed
+runtime files matched the temporary experimental candidate package exactly;
+the final release intentionally retains the stable loader instead. The rollback script
+passed a dry run; an actual rollback has not been exercised.
+
+All 14 original inputs match the baseline. A full rebuild matches the released
+PAK contents; D3D11 hardware/WARP shader checks, Lua regressions, 51 behavior
+transitions, seven package checks, and formatting/lint pass. Package checks cover
+the stable standalone layout, identical mod bytes across the different package
+paths, and the documented manual install into both flat and nested layouts,
+preserving an existing loader, configuration, mod lists, and other mods.
+
+The user reported that both DX11 and DX12 work after being asked to test presets,
+gradients, vignette, console status, level/restart persistence, and new stutters.
+This is user-reported gameplay validation, not measured performance data or an
+itemized result for every checklist entry. The final launch log identifies Git
+SHA `4fb9b615`, the nested Mods/configuration paths, successful QDGraphics/menu
+hook registration, player-ready application, Original/Modern changes, and F10
+console setup. There are no QDGraphics callback errors in that log. UE4SS reports
+an unavailable `FObjectPtrProperty` size during startup; the mod does not use it.
+
+Fresh-preference adoption, removal, controller navigation, damage/cutscenes,
+exhaustive palette coverage, and combinations with other mods were not separately
+retested. The clean minimal experimental loader contents were installed and launched, but not
+on a second machine or a fresh save. Later experimental builds are not covered.
+
+Publication is pending. The existing v1.0.2 release assets remain untouched.
+
 ## Steam update 26496428: compatibility confirmed, 2026-11-06
 
 The monitor reported build 26477048; Steam subsequently finished installing
