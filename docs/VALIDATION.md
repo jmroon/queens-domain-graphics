@@ -3,7 +3,9 @@
 ## Release 1.0.3: installation layouts and experimental compatibility, 2026-11-06
 
 Standalone retains the previously tested stable UE4SS **3.0.1**, with the same
-loader/helper bytes and configuration as v1.0.2. Mod-only now contains `PAKs`
+loader/helper bytes and configuration as v1.0.2. All 15 runtime files were
+compared against the checksum-verified, published v1.0.2 standalone ZIP and
+match byte-for-byte. Mod-only now contains `PAKs`
 and `QDGraphics` folders; users copy them to the game's Paks and their active
 UE4SS Mods folder, respectively. Lua and PAK bytes are unchanged from v1.0.2.
 The canonical runtime manifest keeps the standalone's flat installation paths.
@@ -43,7 +45,20 @@ exhaustive palette coverage, and combinations with other mods were not separatel
 retested. The clean minimal experimental loader contents were installed and launched, but not
 on a second machine or a fresh save. Later experimental builds are not covered.
 
-Publication is pending. The existing v1.0.2 release assets remain untouched.
+GitHub v1.0.3 and both Nexus files were published on 2026-11-06. GitHub CI
+passed and reproduced both ZIP hashes; GitHub asset digests and Nexus's scan
+links match those hashes. Both Nexus downloads are available after scanning.
+The full description, file descriptions, and version were read back publicly.
+Older Nexus files are retained in the archive; all GitHub v1.0.2 asset digests
+remain unchanged. The website deployment passed; its live v1.0.3 download
+links, stable-loader wording, and both mod-only destinations were verified.
+The rendered installation section was checked and no browser console errors
+were reported. Local browser preview was unavailable, so visual verification
+used the deployed page.
+
+Release SHA-256:
+- Mod-only: `b570535d4065d3538a2a793602ed88d940d2902169fed875818b4242fd5e1864`
+- Standalone: `b2cf8da1ab88abc229f8d9e7947f2be02f33c7e861d6f0b0be80319c21e74212`
 
 ## Steam update 26496428: compatibility confirmed, 2026-11-06
 
