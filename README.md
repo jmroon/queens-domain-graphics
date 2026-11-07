@@ -51,7 +51,7 @@ qd_defaults
 
 ## Compatibility and removal
 
-Tested with **Steam build 26356968**, **UE4.27**, **UE4SS 3.0.1**, and **D3D11 / DX12**. The maintainer confirmed successful in-game DX12 testing on 2026-11-03. Smooth modes increase LUT samples from 2 to 16 per pixel; the performance cost depends on resolution and hardware. The Lua controls use events, with no polling timer or per-frame callback.
+Tested with **Steam build 26496428**, **UE4.27**, **UE4SS 3.0.1**, and **D3D11 / DX12**. On 2026-11-06, the maintainer confirmed preset and effect controls, level/restart persistence, and no new periodic stutters in both renderers. Version 1.0.2 needs no update. Smooth modes increase LUT samples from 2 to 16 per pixel; the performance cost depends on resolution and hardware. The Lua controls use events, with no polling timer or per-frame callback.
 
 Updates can affect the three overridden assets: `DitherBase`, `PixelFilter_MPC`, and `Video_OptionsList`. Other mods replacing them can conflict. This is a PAK **and** Lua mod; putting everything in `~mods` is insufficient. Original game PAKs remain untouched.
 

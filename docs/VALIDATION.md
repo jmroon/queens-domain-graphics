@@ -1,5 +1,34 @@
 # Validation record
 
+## Steam update 26496428: compatibility confirmed, 2026-11-06
+
+The monitor reported build 26477048; Steam subsequently finished installing
+26496428 locally. The checks below apply to installed build **26496428**, not a
+separate test of 26477048. The tested baseline is now 26496428.
+
+- All 14 original input files match the supported hashes exactly, including the
+  material, parameter collection, Video menu, and four colour LUTs.
+- A full source rebuild produces asset contents identical to both released PAKs.
+- D3D11 hardware and WARP accept both complete pixel shaders; all three lookup
+  modes match the independent CPU references.
+- Lua preset/menu tests, all 51 behavior-parity transitions, and six package tests
+  pass. All eight installed mod payload files match the release manifest.
+- The latest launch log shows native menu hooks registering and player-ready
+  settings applying. The console's initial invalid-object message is followed
+  by successful F10/Subtract key setup.
+
+The maintainer confirmed that the requested gameplay checks pass in both DX11
+and DX12: Original/Modern preset cycling, individual gradient and vignette
+controls, persistence across a level change and restart, and no new periodic
+stutters in motion. This is user-reported in-game validation; the automated GPU
+checks above use D3D11 hardware/WARP.
+
+Release 1.0.2 remains compatible; no runtime changes, replacement installation,
+or new download package were needed. Fresh-preference adoption, removal,
+controller navigation, and exhaustive damage/cutscene/palette coverage were
+not separately repeated for this update. Historical release records below
+retain their original tested builds.
+
 ## Release 1.0.2: readability refactor
 
 Preferences and rendering are separate Lua modules; menu/native callbacks use
